@@ -1,0 +1,15 @@
+.gallery-cell span.slide--bio_quote {
+  max-width: 65ch;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.gallery-cell p {
+  max-width: 65ch;
+  font-size: 18px;
+}
+
+.main_gallery {
+  background: var(--brand_color_3);
+  box-shadow: 2px 2px 1px var(--black);
+}

@@ -1,0 +1,1069 @@
+/* #region All Sections */
+:root {
+  --services_border_radius: 5px;
+  --services_border_radius_card_pics: 20px;
+  --card_bg_color: #f5fffa;
+  --body_bg_color: #eee;
+  --card_width: 90vw;
+  --box_shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --space_between_h1_and_h2: 1vh;
+  --space_between_h2_and_title_card: 10vh;
+  --space_between_cards: 15vh;
+  --space_between_pitch_cards: 10vh;
+  --font_size--anchor_links: 1.5rem;
+}
+
+/* body {
+  background: var(--body_bg_color);
+} */
+
+h1.services_h1 {
+  margin-bottom: 3vh;
+  font-family: var(--font_family_2);
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: var(--brand_color_3);
+}
+
+h2 {
+  font-family: var(--font_family_2);
+  font-weight: 700;
+  /* font-size: var(--font_size_4); */
+  color: var(--brand_color_3);
+}
+
+h2 {
+  /* font-size: var(--font_size_3); */
+}
+
+p {
+  font-weight: 400;
+  /* font-size: var(--font_size_1); */
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+p.first_paragraph {
+  /* font-size: var(--font_size_2); */
+}
+
+/* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 --- TYPOGRAPHY --- SPAN CLASSES */
+
+.center {
+  text-align: center;
+}
+
+.shorten-ch {
+  max-width: 10ch;
+}
+
+span.bigger {
+  /* font-size: var(--font_size_2); */
+}
+
+span.biggest {
+  /* font-size: var(--font_size_3); */
+}
+
+span.bolder {
+  font-weight: 700;
+}
+
+span.hacky_inline_block_fix {
+  display: inline-block;
+  width: 85%;
+}
+
+div.ribbon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0px;
+  background: var(--brand_color_1);
+}
+
+p.center_bullet {
+  /* text-align: center; */
+  /* max-width: 475px !important; */
+  font-size: 1.75rem !important;
+  font-weight: 600;
+  color: var(--brand_color_1);
+  color: var(--white) !important;
+}
+
+.brand-highlight {
+  font-size: 1.75rem;
+  color: var(--brand_color_1);
+  font-weight: 600;
+  text-shadow: 0 2px 0 rgba(221, 19, 123, 0.07);
+}
+
+span.global_line_break {
+  display: inline-block;
+}
+
+/* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 --- HYPERLINKS */
+/* Remember that when setting styles for link states, 
+          a:hover must be declared after a:link & a:visited and 
+          a:active must be declared after a:hover. */
+
+a:link {
+  color: var(--brand_color_1);
+  /* font-size: var(--font_size_1); */
+}
+
+a:visited {
+  color: var(--brand_color_2);
+  /* font-size: var(--font_size_1); */
+}
+
+a:hover,
+a:focus {
+  color: var(--brand_color_1);
+  /* font-size: var(--font_size_1); */
+}
+
+a:active {
+  color: var(--black);
+  /* font-size: var(--font_size_1); */
+}
+
+/* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 --- ORDERED & UNORDERED LISTS & LIST ITEMS */
+ul {
+  font-family: var(--font_family_1);
+  /* font-size: var(--font_size_1); */
+}
+
+li {
+  padding-bottom: 0.25vh;
+}
+
+/* #endregion */
+
+main#coaching-combined {
+  background: var(--brand_color_3);
+  /* background-image: url(../images/cc_website_background.png); */
+}
+
+/* #region Sig Series Title */
+
+section.sig_series_title h1 {
+  text-align: center;
+  margin-bottom: var(--space_between_h1_and_h2);
+  color: var(--white);
+}
+
+section.sig_series_title span.sss_pseudo_h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+}
+
+section.sig_series_title .grid-container-title-card {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 10vh 0.5fr 10vh;
+  justify-content: center;
+  align-items: center;
+  /* background: var(--body_bg_color); */
+  background: var(--gray_card);
+  background: var(--brand_color_3);
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+section.sig_series_title .grid-title-card-band {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--services_border_radius);
+  background: var(--card_bg_color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+section.sig_series_title .grid-title-card-text {
+  /* Moved text over one column to the right (1 --> 2) on desktop for better text/image symmetry.  T
+  Text is moved back to 1 on tablet & mobile views. */
+  grid-column: 2 / 6;
+  grid-column: 2 / 9;
+  grid-row: 2;
+  /* height: 100%;
+  width: 100%;
+  max-width: 60ch; */
+  /* For some reason, I have to explicitly set a font size so that the max-width: 60ch plays nice with spacing & laying? */
+  /* font-size: var(--font_size_1); */
+  /* Vertical width units are used for top & hottom padding instead of vertical height because the original padding values (3em 4em 2em) looked great and I wanted to preserve them when converting all units over to vertical width or height units.  Because em is calculated using the "loca" font size, and the local font size is set in vws, the corresponding padding values had to be set in vw as well to recreate the original effect. */
+  border-radius: var(--services_border_radius);
+  padding: 4.5vw 6vw 3vw;
+  background: var(--card_bg_color);
+}
+
+section.sig_series_title .grid-title-card-text p {
+  max-width: 30ch;
+  margin-top: 40px;
+  font-size: 2.5rem;
+}
+
+section.sig_series_title #grid-title-card-text-pwyf p:first-of-type {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+section.sig_series_title #grid-title-card-text-sss p,
+section.sig_series_title #grid-title-card-text-pwyf p,
+section.sig_series_title #one_on_one_coaching-text p {
+  max-width: 30ch;
+  margin-top: 40px;
+  font-size: 2.15rem;
+}
+
+section.sig_series_title #grid-title-card-text-sss p:first-of-type,
+section.sig_series_title #grid-title-card-text-pwyf p:first-of-type,
+section.sig_series_title #one_on_one_coaching-text p:first-of-type {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+section.sig_series_title .grid-title-card-image {
+  grid-column: 6 / 9;
+  grid-column: 7 / 9;
+  grid-row: 1 / 4;
+  /* Changed value from height: auto to height: 100% for One-on-One Coaching Title Card Image.*/
+  height: 100%;
+  /* max-width: 75%; */
+}
+
+section.sig_series_title .grid-title-card-image-pwyf,
+section.sig_series_title .grid-title-card-image-sss {
+  grid-column: 6 / 9;
+  grid-row: 1 / 4;
+  justify-self: center;
+  /* Changed value from height: auto to height: 100% for One-on-One Coaching Title Card Image.*/
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* #endregion */
+
+/* #region Anchor Links */
+
+section.anchor_links h2 {
+  text-align: center;
+  max-width: 50ch;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  padding: 10px;
+  background: var(--white);
+}
+
+section.anchor_links div.flex_container-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--card_bg_color);
+  width: var(--card_width);
+  border-radius: var(--services_border_radius);
+  box-shadow: var(--box_shadow);
+  margin: 0 auto;
+  margin-bottom: var(--space_between_cards);
+}
+
+section.anchor_links div.h2-flex_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+section.anchor_links div.instructions-flex_container {
+  display: flex;
+  flex-direction: column;
+  background: var(--card_bg_color);
+}
+
+section.anchor_links div.instructions-flex_container-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2vw;
+  background: var(--card_bg_color);
+}
+
+section.anchor_links div.instructions-flex_container-top div {
+  margin-bottom: 50px;
+}
+
+section.anchor_links div.instructions-flex_container-bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 2vw;
+  background: var(--card_bg_color);
+}
+
+section.anchor_links div.instructions-flex_container-anchor_links_group {
+  background: var(--brand_color_3);
+  display: flex;
+  align-self: center;
+  width: 60%;
+  border-radius: var(--services_border_radius);
+  padding: 2vw;
+  box-shadow: var(--box_shadow);
+}
+
+section.anchor_links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section.anchor_links li.heart_bullets {
+  display: flex;
+  align-content: center;
+  list-style: none;
+  margin-bottom: 2vh;
+}
+
+section.anchor_links i.fa-heart {
+  margin-left: -5px;
+  margin-right: 55px;
+  font-size: var(--font_size--anchor_links);
+  color: var(--brand_color_1);
+  transition: all 0.5s;
+}
+
+section.anchor_links a.anchor_links,
+a.back_link {
+  display: inline-block;
+  max-width: 55ch;
+  margin-bottom: 25px;
+  font-size: var(--font_size--anchor_links);
+  text-decoration: none !important;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+section.anchor_links a.anchor_links:link,
+a.back_link:link {
+  color: var(--black);
+}
+
+section.anchor_links a.anchor_links:visited,
+a.back_link:visited {
+  color: var(--brand_color_1);
+}
+
+section.anchor_links li.heart_bullets:hover i.fa-heart,
+section.anchor_links li.heart_bullets:hover a.anchor_links {
+  font-size: var(--font_size_hover);
+}
+
+section.anchor_links li.heart_bullets:hover a.anchor_links {
+  color: var(--white);
+}
+
+/* a.anchor_links:hover,
+a.back_link:hover {
+  color: var(--white);
+  font-size: var(--font_size_hover);
+} */
+
+a.back_link:hover {
+  background: var(--black);
+  font-size: var(--font_size_hover);
+  color: var(--white);
+}
+
+section.anchor_links a.anchor_links:active,
+a.back_link:active {
+  color: var(--brand_color_3);
+}
+
+a.back_link {
+  margin-top: 50px;
+  border-radius: var(--services_border_radius);
+  padding: 20px;
+  text-decoration: none;
+  background: var(--gray_card);
+}
+
+/* #endregion */
+
+/* #region Pitch Cards -- Unbulleted */
+
+section.pitch_cards {
+  text-shadow: var(--text_shadow);
+}
+
+section.pitch_cards .center_grid_container--sigseries_cards {
+  /* This code doesn't seem to do anything?
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: var(--gray_card);
+  background: var(--brand_color_3);
+}
+
+section.pitch_cards .grid_container--sigseries_cards {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr 0.65fr repeat(4, 1fr) 1.5fr 0.5fr;
+  grid-template-columns:
+    [left-edge] 0.5fr repeat(2, 1fr)
+    [gap-between-image-and-text] 0.25fr repeat(6, 1fr)
+    [right-edge] 0.5fr;
+  grid-template-rows: repeat(2, 0.25fr) repeat(2, 1fr) 0.75fr repeat(2, 0.25fr);
+  /* grid-template-rows: repeat(2, 0.25fr) repeat(2, 1fr) 0.75fr 0.25fr; */
+  grid-template-areas:
+    "	.	.	.	.	.	.	.	.	.	.	.		"
+    "	.	.	.	.	.	.	.	.	.	.	.		"
+    "	image	image	image	.	text	text	text	text	text	text		.	"
+    "	image	image	image	.	text	text	text	text	text	text		.	"
+    "	.	.	.	.	text text text	text	text	text		.	"
+    "	.	.	.	.	.	.	.	.	.	.	.		"
+    "	.	.	.	.	.	.	.	.	.	.	.	";
+  /* grid-template-areas:
+    "	. . . .	.	.	.	.	.	.	.		"
+    "	. . . .	text	text	text	text	text	.	.		"
+    "	image	image	image	.	text	text	text	text	text	.		.	"
+    "	image	image	image	.	text	text	text	text	text	.		.	"
+    "	image	image	image	.	text text text	text	text	.		.	"
+    "	.	.	.	.	.	.	.	.	.	.	.		"
+    "	.	.	.	.	.	.	.	.	.	.	.	"; */
+  justify-content: center;
+  width: 90vw;
+  margin-bottom: var(--space_between_pitch_cards);
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+section.pitch_cards .sigseries--card_band {
+  background: var(--card_bg_color);
+  grid-column: 2 / -2;
+  grid-row: 2 / 7;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--services_border_radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+section.pitch_cards .sigseries--card_image {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: var(--services_border_radius_card_pics);
+  box-shadow: 2px 2px 2px 2px var(--brand_color_1);
+}
+
+section.pitch_cards .sigseries--card_text {
+  grid-area: text;
+}
+
+section.pitch_cards .sigseries--card_text div.h2_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* margin-bottom: -40px; */
+}
+
+section.pitch_cards .sigseries--card_text h2 {
+  text-align: center;
+  max-width: 30ch;
+  padding-bottom: 5px;
+  /* max-width: 35ch; */
+  font-size: 2.75rem;
+  color: var(--black);
+}
+
+section.pitch_cards .sigseries--card_not_bulleted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.pitch_cards .sigseries--card_not_bulleted p {
+  max-width: 50ch;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+div#container--ask_yourself {
+  /* Hacky margin. */
+  margin: -10px 0px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.ask_yourself {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+  background: var(--brand_color_1);
+  width: 75%;
+  border-radius: 10px;
+}
+
+ul.ask_yourself li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 85%;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+ul.ask_yourself li i {
+  margin-right: 10px;
+  font-size: 1.85rem;
+  color: var(--white);
+}
+
+ul.ask_yourself li span {
+  max-width: 35ch;
+}
+
+section.pitch_cards div.sigseries--card_not_bulleted p:first-of-type {
+  /* Make 1st paragraph text of non-bulleted cards slightly bigger. */
+  font-size: 2vw;
+  font-size: 1.9rem;
+  max-width: 560px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* #endregion */
+
+/* #region Pitch Cards -- Bulleted */
+
+section.pitch_cards .sigseries--card_bulleted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 55vw; */
+}
+
+section.pitch_cards h2 {
+  margin: 0 0 3vw;
+  font-family: var(--font_family_1);
+  font-weight: 700;
+  /* font-size: 2.6vw; */
+}
+
+section.pitch_cards .sigseries--card_bulleted ul {
+  width: 75%;
+}
+
+section.pitch_cards .sigseries--card_bulleted li,
+section.pitch_cards .sigseries--card_bulleted p {
+  /* max-width: 50ch; */
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.pitch_cards
+  .sigseries--card_bulleted
+  li
+  div.flex_container--basic_row
+  span {
+  flex-grow: 1;
+  max-width: 40ch;
+  font-weight: 700;
+  color: var(--brand_color_1);
+  color: var(--black);
+}
+
+section.pitch_cards
+  .sigseries--card_bulleted
+  li
+  div.flex_container--basic_row
+  span.purple {
+  color: var(--brand_color_1);
+}
+
+section.pitch_cards
+  .sigseries--card_bulleted
+  li
+  div.flex_container--basic_row
+  i.fa-check-square {
+  padding-right: 15px;
+  font-size: 3rem;
+}
+
+section.pitch_cards div.sigseries--card_bulleted li {
+  /* font-size: 1.25vw; */
+}
+
+/* #endregion */
+
+/* #region Media Queries */
+
+/* #region Media Queries - Tablets */
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  /* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 */
+  :root {
+    --space_between_h1_and_title_card: 5vh;
+    --space_between_cards: 5vh;
+    --space_between_pitch_cards: 5vh;
+  }
+
+  /* ----- 💞💞💞 SECTION.SIG_SERIES_TITLE 💞💞💞 */
+
+  section.sig_series_title .grid-container-title-card {
+    /* grid-template-rows: 0vh 1fr 0vh; */
+  }
+
+  section.sig_series_title .grid-title-card-text {
+    grid-column: 1 / 6;
+  }
+
+  section.sig_series_title .grid-title-card-image {
+    grid-column: 6 / 9;
+    grid-row: 1 / 4;
+    justify-self: center;
+    /* height: 90%;
+    max-width: 90%; */
+  }
+
+  section.anchor_links div.instructions-flex_container-top {
+    flex-direction: column;
+  }
+
+  /* ----- 💞💞💞 SECTION.PITCH_CARDS 💞💞💞 */
+
+  section.pitch_cards ul {
+    padding: 2vw;
+  }
+
+  section.pitch_cards .center_grid_container--sigseries_cards {
+    width: 100%;
+    height: 100%;
+    background: var(--card_bg_color);
+    border-radius: var(--services_border_radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-top: 10vh;
+    margin-bottom: var(--space_between_pitch_cards);
+  }
+
+  section.pitch_cards .grid_container--sigseries_cards {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  section.pitch_cards .sigseries--card_image {
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    width: 45%;
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: var(--services_border_radius_card_pics);
+  }
+
+  section.pitch_cards .sigseries--card_bulleted {
+    max-width: 9999ch;
+  }
+
+  section.pitch_cards .sigseries--card_not_bulleted {
+    align-self: center;
+    justify-self: center;
+    max-width: 9999ch;
+  }
+
+  section.pitch_cards h2 {
+    font-size: var(--font_size_3);
+    text-align: center;
+  }
+
+  section.pitch_cards div.sigseries--card_bulleted li {
+    margin-bottom: 1vh;
+  }
+
+  section.anchor_links div.instructions-flex_container-anchor_links_group {
+    width: 90%;
+  }
+
+  ul.ask_yourself {
+    width: 100%;
+  }
+}
+/* #endregion */
+
+/* #region Media Queries - Smartphones */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 */
+  :root {
+    --space_between_h1_and_title_card: 7vh;
+    --space_between_cards: 5vh;
+    --space_between_pitch_cards: 5vh;
+  }
+
+  /* ----- 💞💞💞 SECTION.SIG_SERIES_TITLE 💞💞💞 */
+
+  section.sig_series_title .grid-container-title-card {
+    grid-template-rows: 0vh 1fr 0vh;
+  }
+  section.sig_series_title .grid-title-card-image {
+    grid-column: 7 / 9;
+    grid-row: 1 / 4;
+    height: auto;
+    max-width: 100%;
+  }
+
+  section.sig_series_title .grid-title-card-image-pwyf,
+  section.sig_series_title .grid-title-card-image-sss {
+    grid-column: 5 / 9;
+    grid-row: 1 / 4;
+    height: auto;
+    max-width: 90%;
+  }
+
+  section.sig_series_title #grid-title-card-text-pwyf,
+  section.sig_series_title #grid-title-card-text-sss {
+    grid-column: 1 / 6;
+  }
+
+  /* COMMENTED OUT PREVIOUSLY */
+  section.sig_series_title .grid-title-card-text {
+    grid-column: 1 / 7;
+    grid-row: 2 / 4;
+  }
+
+  section.sig_series_title #grid-title-card-text-pwyf p,
+  section.sig_series_title #grid-title-card-text-sss p {
+    font-size: 2rem;
+  }
+
+  section.sig_series_title #grid-title-card-text-pwyf p:first-of-type,
+  section.sig_series_title #grid-title-card-text-sss p:first-of-type {
+    font-size: 2.5rem;
+  }
+
+  /* ----- 💞💞💞 SECTION.ANCHOR_LINKS 💞💞💞 */
+
+  section.anchor_links div.instructions-flex_container-top {
+    flex-direction: column;
+  }
+
+  section.anchor_links div.instructions-flex_container-anchor_links_group {
+    padding: 1.25vh;
+  }
+
+  section.anchor_links div.anchor_links_group-1 {
+    margin-bottom: 2vh;
+  }
+
+  section.anchor_links div.anchor_links_group-2 {
+    flex-grow: 2;
+  }
+
+  section.anchor_links div.anchor_links_group-3 {
+    flex-grow: 2;
+  }
+
+  section.anchor_links div.flex_container-container {
+    width: 100%;
+  }
+
+  section.anchor_links div.instructions-flex_container-top {
+    gap: 0vw;
+  }
+
+  /* ----- 💞💞💞 SECTION.PITCH_CARDS 💞💞💞 */
+
+  section.pitch_cards span.mobile_break {
+    display: inline-block;
+  }
+
+  section.pitch_cards ul {
+    padding: 2vw;
+  }
+
+  section.pitch_cards .center_grid_container--sigseries_cards {
+    width: 100%;
+    height: 100%;
+    background: var(--card_bg_color);
+    border-radius: var(--services_border_radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-top: 10vh;
+    margin-bottom: var(--space_between_pitch_cards);
+  }
+
+  section.pitch_cards .grid_container--sigseries_cards {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  section.pitch_cards .sigseries--card_image {
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    width: 75%;
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: var(--services_border_radius_card_pics);
+  }
+
+  section.pitch_cards .sigseries--card_bulleted {
+    max-width: 9999ch;
+  }
+
+  section.pitch_cards .sigseries--card_not_bulleted {
+    align-self: center;
+    justify-self: center;
+    max-width: 9999ch;
+  }
+
+  section.pitch_cards h2 {
+    text-align: center;
+  }
+
+  section.pitch_cards div.sigseries--card_bulleted li {
+    margin-bottom: 1vh;
+  }
+
+  section.anchor_links div.instructions-flex_container-anchor_links_group {
+    width: 100%;
+  }
+
+  section.anchor_links
+    div.instructions-flex_container-anchor_links_group
+    i.fa-heart {
+    margin-left: 5px;
+    font-size: 1.85rem;
+  }
+
+  section.anchor_links
+    div.instructions-flex_container-anchor_links_group
+    a.anchor_links {
+    font-size: 1.35rem;
+  }
+
+  ul.ask_yourself {
+    width: 100%;
+  }
+}
+
+/* #endregion */
+
+/* #region Media Queries - Custom Breakpoints */
+
+/* # region Pitch Card Checkboxes & Accompanying Text
+
+    Resizing Font Awesome checkboxes & checkbox text to prevent wrap
+    on desktop/laptop/tablet & change flex-direction from row to
+    column on mobile.  Not 100% happy with this: not very DRY or 
+    parsimonious code.  Will have to refactor later. */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  h1.services_h1 {
+    font-size: 4.5rem;
+  }
+
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    span {
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 731px) {
+  section.sig_series_title span.sss_pseudo_h2 {
+    font-size: 2rem;
+    color: var(--brand_color_1);
+  }
+}
+
+/* 576 min */
+@media screen and (min-width: 0px) and (max-width: 817px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row {
+    /* flex-direction: column; Old 4/20/21 */
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  section.pitch_cards .sigseries--card_bulleted ul {
+    display: inline-block;
+    width: 100%;
+  }
+
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    i.fa-check-square {
+    /* width: 65%; Old 4/20/21 */
+    /* max-width: 35ch; */
+    width: 35%;
+    padding-top: 10px;
+    /* font-size: 1.75rem; old 4/20/21 */
+    font-size: 2.75rem;
+  }
+
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    span {
+    /* width: 65%; Old 4/20/21*/
+    max-width: 35ch;
+    width: 60%;
+    padding-top: 10px;
+    /* font-size: 1.75rem; old 4/20/21 */
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1304px) {
+  /* PWYF & SSS Title Card Image & Text */
+
+  section.sig_series_title .grid-title-card-text {
+    grid-column: 1 / 6;
+  }
+
+  section.sig_series_title .grid-title-card-image-pwyf,
+  section.sig_series_title .grid-title-card-image-sss {
+    grid-column: 6 / 9;
+    grid-row: 1 / 4;
+    justify-self: center;
+    /* height: 90%;
+    max-width: 90%; */
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1304px) {
+  /* PWYF & SSS Title Card Image & Text */
+
+  section.sig_series_title .grid-title-card-text {
+    grid-column: 1 / 6;
+  }
+
+  section.sig_series_title .grid-title-card-image-pwyf,
+  section.sig_series_title .grid-title-card-image-sss {
+    grid-column: 6 / 9;
+    grid-row: 1 / 4;
+    justify-self: center;
+    /* height: 90%;
+    max-width: 90%; */
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1075px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    span {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1076px) and (max-width: 1144px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    span {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1145px) and (max-width: 1157px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    i.fa-check-square {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1158px) and (max-width: 1164px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    i.fa-check-square {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1165px) and (max-width: 1185px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    i.fa-check-square {
+    font-size: 2.25rem;
+  }
+}
+
+/* @media screen and (min-width: 803px) and (max-width: 817px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    i.fa-check-square {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 802px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    i.fa-check-square {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 788px) {
+  section.pitch_cards
+    .sigseries--card_bulleted
+    li
+    div.flex_container--basic_row
+    span {
+    font-size: 1.25rem;
+  }
+} */
+
+/* #endregion */
+
+/* #endregion */
+
+/* #endregion */

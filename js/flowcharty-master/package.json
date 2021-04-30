@@ -1,0 +1,37 @@
+{
+  "name": "flowcharty",
+  "version": "0.6.0",
+  "description": "flowchart with d3.js",
+  "main": "./lib/flowcharty.js",
+  "scripts": {
+    "build": "rimraf lib/**/* && parcel build --no-cache ./src/flowcharty.ts -d ./lib -o flowcharty.js --global Flowcharty",
+    "debug": "rimraf dist/**/* && parcel ./debug/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atago0129/flowcharty.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "d3.js",
+    "flowchart"
+  ],
+  "author": "atago0129",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atago0129/flowcharty/issues"
+  },
+  "homepage": "https://github.com/atago0129/flowcharty#readme",
+  "dependencies": {
+    "d3": "^5.7.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^5.0.0",
+    "parcel-bundler": "^1.9.7",
+    "rimraf": "^2.6.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.0.3"
+  }
+}

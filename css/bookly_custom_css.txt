@@ -1,0 +1,22 @@
+span.bookly-desc {
+	display: inline-block;
+	width: 100%;
+	padding: 20px;
+	background: #fc9ac2;
+	background: rgba(252, 154, 194, .25);
+	text-align: center;
+}
+
+span.bookly-editable {
+	font-size: 20px;
+}
+
+div.bookly-progress-tracker div:nth-of-type(4) {
+	font-family:"Pacifico", cursive;
+	display: none;
+}
+
+div.bookly-progress-tracker div:nth-of-type(5) {
+	font-family: "Pacifico", cursive;
+	display: none;
+}

@@ -1,0 +1,303 @@
+/* ----- 🧩🧩🧩 SECTION: Welcome to Compatible Connections 🧩🧩🧩 ----- */
+
+/* Center "Welcome, Fabulous Single!" div */
+
+div#flex_container--welcome {
+  justify-content: space-evenly;
+  align-items: center;
+  padding: calc(var(--gray_hero--top_and_bottom_padding) * 0.75);
+}
+
+div#welcome_image_and_animation {
+  position: relative;
+}
+
+/* Size Coach Berandette Exported from Adobe Character Animator */
+
+div#welcome_image_and_animation img {
+  /* Placeholder for any future CSS that may be needed. */
+}
+
+/* Position animated hearts just above & to the right of Coach Bernadette's right-hand. */
+/*    GRMA https://codepen.io/z-/pen/bpxgWZ */
+
+span.hearts_block {
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  font-size: 8px;
+  color: transparent;
+}
+
+/* Style animated hearts */
+
+.hearts > .particle {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(204, 42, 93, 1);
+  animation: hearts 5s ease-in infinite;
+}
+.hearts > .particle:before,
+.hearts > .particle:after {
+  position: absolute;
+  content: "";
+  border-radius: 100px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(204, 42, 93, 1);
+}
+
+.hearts > .particle:before {
+  transform: translateX(-50%);
+}
+.hearts > .particle:after {
+  transform: translateY(-50%);
+}
+
+div#welcome_text {
+  align-items: center;
+  padding: 0px;
+}
+
+div#welcome_text p {
+  max-width: 35ch;
+  font-size: 1.25rem;
+}
+
+div#welcome_text p:first-of-type {
+  font-weight: 700;
+  font-size: 30px;
+  font-size: 2rem;
+}
+
+p#welcome_text--cc_summary {
+  align-self: center;
+  text-align: center;
+}
+
+div#welcome_text--card {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 85%;
+  /* align-items: center;
+  border-radius: var(--card--border_radius);
+  padding: 20px; */
+}
+
+div#welcome_text--card p:first-of-type {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* Latest Dating Tip & Inspirational Graphic CSS */
+/*    Not currently implemented in HTML: 4/4/21. */
+
+/* div#welcome_text--latest {
+  align-content: center;
+  width: 75%;
+  margin-top: 60px;
+}
+
+div#welcome_text--latest i:first-child {
+  margin-bottom: 15px;
+}
+
+div#welcome_text--latest i {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 50px;
+  color: var(--brand_color_1);
+}
+
+div#welcome_text--latest i span {
+  align-self: center;
+  margin-left: 25px;
+  padding-left: 10px;
+  font-family: Pacifico, cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+} */
+
+/* ----- 🧩🧩🧩 SECTION: What Is Compatibility?  Why Is It Important? & Explore Our Website 🧩🧩🧩 ----- */
+
+div#gray_card--what_is_compatibility div.gray_card--image_and_text_block,
+div#gray_card--explore_our_website div.gray_card--image_and_text_block {
+  justify-content: space-around;
+}
+
+/* Apply margin to the right-hand side of "What Is Compatibility" images to prevent
+    text to their right from getting too close to image prior to flex wrapping. */
+div#gray_card--what_is_compatibility div.gray_card--image_and_text_block img {
+  margin-right: 35px;
+}
+
+div.compatibility_text {
+  /* Set an explicit width to ensure image & text blocks
+        with different line lengths wrap at the same breakpoints! */
+  width: 550px;
+}
+
+/* ----- 🧩🧩🧩 SECTION: Let's Connect! 🧩🧩🧩 ----- */
+
+div.container--lets_connect {
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 50px 0px;
+  background: whitesmoke;
+}
+
+div.container--lets_connect p {
+  max-width: 50ch;
+  margin: 10px;
+  font-size: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+div.container--lets_connect p.connect_text:first-of-type {
+  max-width: 40ch;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+div.container--lets_connect img {
+  align-self: center;
+  max-width: 150px;
+  height: 150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+div#paper--cc_lets_connect {
+  align-items: center;
+}
+
+div#paper--cc_lets_connect {
+  min-height: 250px;
+  font-family: Pacifico, cursive;
+  transform: rotate(-10deg);
+}
+
+div#paper--cc_lets_connect p {
+  font-size: 35px;
+}
+
+i.connect_icon {
+  margin-top: 10px;
+  color: yellow;
+  font-size: 25px;
+  font-size: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: font-size ease-in-out 0.5s, color ease-in-out 0.5s;
+}
+
+div#paper--cc_lets_connect i.connect_icon:hover,
+div#paper--cc_lets_connect i.connect_icon:focus {
+  color: black;
+  font-size: 55px;
+}
+
+/* #region Keyframe Animations */
+
+@keyframes hearts {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0%) rotate(45deg);
+  }
+  20% {
+    opacity: 0.8;
+    transform: translate(0, -20%) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1000%) rotate(45deg);
+  }
+}
+
+/* #endregion */
+
+/* #region Media Queries */
+
+/* #region Media Queries -- Smartphones */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  div#flex_container--welcome {
+    padding: 0px;
+  }
+
+  p#welcome_text--cc_summary {
+    font-size: 1.75rem;
+  }
+
+  div#welcome_text--card {
+    width: 100%;
+  }
+
+  div.gray_card--image_and_text_block {
+    justify-content: center;
+    align-items: center;
+  }
+  div#gray_card--what_is_compatibility
+    div.gray_card--image_and_text_block
+    p:first-of-type {
+    margin-top: 25px;
+  }
+
+  div.gray_card--image_and_text_block img,
+  div.gray_card--image_and_text_block div#crystal_ball_wrapper {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  div.gray_card--image_and_text_block p:first-of-type {
+    text-align: center;
+  }
+
+  div#paper--cc_lets_connect {
+    margin-bottom: 25px;
+    transform: none;
+  }
+}
+
+/* #endregion */
+
+/* #region Media Queries - Tablets */
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  div#gray_card--what_is_compatibility
+    div.gray_card--image_and_text_block
+    p:first-of-type {
+    margin-top: 25px;
+  }
+
+  div#gray_card--explore_our_website
+    div.gray_card--image_and_text_block
+    p:last-of-type {
+    margin-bottom: 25px;
+  }
+
+  div.gray_card--image_and_text_block p {
+    margin: 10px auto;
+  }
+
+  div.gray_card--image_and_text_block p:first-of-type {
+    text-align: center;
+  }
+}
+
+/* #endregion */
+
+@media screen and (min-width: 575px) and (max-width: 986px) {
+  div#paper--cc_lets_connect {
+    margin-bottom: 25px;
+    transform: none;
+  }
+}
+/* #endregion */

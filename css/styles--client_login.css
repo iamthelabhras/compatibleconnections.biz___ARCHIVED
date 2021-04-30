@@ -1,0 +1,91 @@
+/* Bordered form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 50%;
+  border: 3px solid var(--black);
+}
+
+form div.container {
+  display: flex;
+  flex-direction: column;
+}
+
+form div.container#login_and_remember_me {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+form#client_login--form button {
+  background-color: #4caf50;
+  background-color: var(--black);
+  border-radius: var(--border_radius);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+/* Add a hover effect for buttons */
+form#client_login--form button:hover {
+  opacity: 0.8;
+}
+
+form#client_login--form input {
+  border: 1px solid black;
+}
+
+form#client_login--form input {
+  background: #efefef;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  text-align: center;
+  padding-top: 16px;
+  color: var(--brand_color_1);
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
