@@ -4,3 +4,5 @@ node_modules/
 ops/
 
 # Tell Git to ignore these files:
+.gitignore
+.DS_Store
