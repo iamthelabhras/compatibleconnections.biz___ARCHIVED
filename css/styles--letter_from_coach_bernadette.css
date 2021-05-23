@@ -64,12 +64,21 @@ div.container--letter--text path {
 
 /* #region Letter Image */
 
+aside.container--letter--image_certifications_and_links {
+  justify-content: space-between;
+  align-items: center;
+  background: grey;
+  overflow: visible;
+}
+
 div.container--letter--image {
+  position: -webkit-sticky;
   position: sticky;
-  top: 50px;
+  top: 60px;
   align-content: center;
-  margin-bottom: 175px;
   padding: 25px;
+  overflow: visible;
+  background: orangered;
 }
 
 div.container--letter--image img.coach_bernadette-portrait {
