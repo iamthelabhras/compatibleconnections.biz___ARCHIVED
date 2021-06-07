@@ -881,7 +881,7 @@ div#footer-social_icons i:focus {
 @media screen and (min-width: 0px) and (max-width: 512px) {
 }
 
-@media screen and (min-width: 0px) and (max-width: 625px) {
+@media screen and (min-width: 0px) and (max-width: 690px) {
   header {
     display: none;
   }
@@ -905,7 +905,7 @@ div#footer-social_icons i:focus {
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 559px) {
+@media screen and (min-width: 0px) and (max-width: 623px) {
   footer {
     justify-content: center;
     align-items: center;
