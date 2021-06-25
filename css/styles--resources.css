@@ -429,6 +429,12 @@ div#article_container {
 
 /* #region Article Full Text */
 
+div#article_container h1,
+div#article_container h2,
+div#article_container h3 {
+  text-align: center;
+}
+
 div#article_title_block {
   display: flex;
   justify-content: center;
@@ -474,6 +480,24 @@ div#article_container p.empowering_ways--numbers {
 
 div#article_container p:last-of-type {
   margin-bottom: 45px;
+}
+
+div#article_container ul {
+  max-width: 45ch;
+  padding: 12px 0px;
+  font-size: 18px;
+}
+
+div#article_container ul li {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0 20px 5px;
+  padding-bottom: 10px;
+  background: url(/images/icons/li_icon-heart-1.svg) no-repeat scroll 0 0
+    transparent;
+  background-size: 12px 12px;
+  background-position-y: 6px;
+  color: #dd137b;
 }
 
 /* #region# Article Container -- Bubble Quote CSS */
@@ -604,6 +628,21 @@ div#article_container div#coach_bernadette_bio_container-text p {
   font-size: 15px;
   font-weight: initial;
 }
+
+/* #endregion */
+
+/* #region Article-specific Styles & IDs */
+
+/* #region  "Random dating vs. Dating Deliberately" */
+
+h2#random_dating_sub_heading {
+  display: inline-block;
+  max-width: 35ch;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* #endregion */
 
 /* #endregion */
 
@@ -1091,10 +1130,18 @@ div.spacer-bottom {
     font-size: 35px;
   }
 
+  div#article_container h2 {
+    align-self: center;
+  }
+
+  h2#random_dating_sub_heading {
+    font-size: 1.75rem;
+  }
+
   div#article_container {
     align-items: flex-start;
     max-width: 95%;
-    padding: 5px;
+    padding: 25px;
   }
 
   div#article_container img:first-of-type {
