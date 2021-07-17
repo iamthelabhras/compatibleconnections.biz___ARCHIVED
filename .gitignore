@@ -7,3 +7,6 @@ ops/
 
 .gitignore
 .DS_Store
+/images/.DS_Store
+/images/meet_cute/.DS_Store
+/images/resources/.DS_Store
