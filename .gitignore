@@ -1,7 +1,6 @@
 # Tell Git to ignore these folders:
 
 node_modules/
-ops/
 
 # Tell Git to ignore these files:
 
