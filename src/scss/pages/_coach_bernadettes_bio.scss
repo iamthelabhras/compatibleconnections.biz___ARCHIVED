@@ -1,0 +1,2625 @@
+/* #region Coach Bernadette's Bio Page-Specific Custom Variables */
+
+:root {
+  --gallery_width: 95vw;
+  --slide_padding--bio_quote_and_bio_text: 5vw;
+  --font_size--bio_quote: 1.725rem;
+  --font_size--bio_text: 1.25rem;
+}
+
+/* #endregion */
+
+/* #region "Swipe left or right to read Coach Berandette's biography!" */
+
+/* Style "swipe left or right" instructions. */
+span.swipe_instructions {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Use margin to "push" left & right arrows away from <p> text. */
+div.gray_hero i.fa-arrow-alt-circle-left {
+  margin-right: 15px;
+}
+
+div.gray_hero i.fa-arrow-alt-circle-right {
+  margin-left: 15px;
+}
+
+div.swipe_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+div.swipe_container .icon__swipe {
+  width: auto;
+  height: auto;
+}
+
+/* #endregion */
+
+/* #region Carousel Container for All Coach Bernadette's Bio "Slides" */
+
+/* Frederic R's CSS From "Minimal Carousel with horiztonal scroll + snap, mobile & mouse friendly" codepen:
+	      https://codepen.io/fredericrous/pen/xxVXJYX */
+
+div.carousel_container {
+  align-items: center;
+  /* font-size: 20px;
+	font-size: 1.75rem; */
+}
+
+.gallery {
+  display: grid;
+  width: var(--gallery_width);
+  height: var(--gallery_height);
+  grid-template-columns: repeat(15, var(--gallery_width));
+  grid-template-rows: 1fr;
+  grid-column-gap: 25vw;
+  grid-row-gap: 1rem;
+  /* .gallery's width must match li.slide's width in #region All Slides! */
+  width: var(--gallery_width);
+  border: 1px solid black;
+  overflow: scroll;
+  scroll-snap-type: both mandatory;
+  -webkit-scroll-snap-type: both mandatory;
+  -ms-scroll-snap-type: both mandatory;
+  scroll-padding: 1rem;
+  background: var(--brand_color_3);
+  box-shadow: 2px 2px 1px var(--black);
+}
+
+.active {
+  scroll-snap-type: unset;
+  -webkit-scroll-snap-type: unset;
+  -ms-scroll-snap-type: unset;
+}
+
+/* #endregion */
+
+/* #region All Slides  */
+
+.slide {
+  /* Implement Flex Box at the "top level" of all slides. */
+  display: flex;
+  flex-wrap: wrap;
+  /* Center all slides in middle of slide container. */
+  justify-self: center;
+  /* Prevent individual slide from growing to fill excess space in carousel row. */
+  align-self: center;
+  /* Remove default margin from li item. */
+  margin: 0;
+  /* li.slide's width must match .gallery's width!*/
+  width: var(--gallery_width);
+  /* Snap slides to center as user swipes from slide-to-slide. */
+  scroll-snap-align: center;
+}
+
+.slide_1,
+.slide_2,
+.slide_3,
+.slide_4,
+.slide_5,
+.slide_6,
+.slide_7,
+.slide_8,
+.slide_10,
+.slide_11,
+.slide_12,
+.slide_13,
+.slide_14,
+.slide_15 {
+  align-content: center;
+}
+
+.slide_6,
+.slide_11 {
+  justify-content: space-around;
+}
+
+.slide--text {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide span.slide--bio_quote {
+  text-align: center;
+  max-width: 50ch;
+  margin-bottom: 2.5vh;
+  /* padding-left: var(--slide_padding--bio_quote_and_bio_text); */
+  font-size: var(--font_size--bio_quote);
+  font-weight: 800;
+  color: var(--brand_color_1);
+  text-shadow: 1px 1px 1px var(--white);
+}
+
+.slide p {
+  max-width: 55ch;
+  padding-left: var(--slide_padding--bio_quote_and_bio_text);
+  font-size: var(--font_size--bio_text);
+}
+.slide_2 p:first-of-type,
+.slide_3 p:first-of-type,
+.slide_6 p:first-of-type,
+.slide_7 p:first-of-type,
+.slide_8 p:first-of-type,
+.slide_9 p:first-of-type,
+.slide_10 p:first-of-type,
+.slide_11 p:first-of-type,
+.slide_12 p:first-of-type,
+.slide_14 p:first-of-type,
+.slide_4 span.slide--bio_quote,
+.slide_5 span.slide--bio_quote,
+.slide_13 span.slide--bio_quote,
+.slide_15 span.slide--bio_quote {
+  margin-top: 25px;
+}
+
+.slide--image {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Prompts users to engage with interactable content. */
+
+span.slide--instructions {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* #endregion */
+
+/* #region Slide 1: "Once upon a time, you were a little girl ..." */
+
+.slide_1 {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.slide_1--text {
+  width: 60%;
+  padding: 20px;
+}
+
+.slide_1--image {
+  width: 40%;
+  min-width: 350px;
+  align-content: center;
+  justify-content: center;
+}
+
+/* #region Slide 1: Sass TV */
+
+.television {
+  width: 100%;
+}
+
+.television__top {
+  width: 40%;
+  margin: auto;
+  position: relative;
+}
+
+.television__antenna {
+  width: 5px;
+  height: 100px;
+  background-color: #3b3733;
+  margin-bottom: -10px;
+}
+
+.television__antenna--left {
+  transform: rotate(-30deg);
+  float: left;
+}
+
+.television__antenna--right {
+  transform: rotate(30deg);
+  float: right;
+}
+
+.television__antenna__base {
+  height: 20px;
+  background-color: #3b3733;
+  background-color: #7d4d25;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border: 3px solid black;
+  clear: both;
+  position: relative;
+  z-index: 2;
+}
+
+.television__center {
+  position: relative;
+  z-index: 2;
+  max-width: 350px;
+  width: 85%;
+  height: 200px;
+  background-color: #7a4e27;
+  background-color: #121110;
+  border: solid 3px #eef4c4;
+  border: solid 3px var(--black);
+  border: solid 2px black;
+  box-shadow: -10px -10px #d64832;
+  box-shadow: -5px -10px var(--black);
+  box-shadow: none;
+  border-radius: 48px;
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.television__screen {
+  display: flex;
+  justify-content: center;
+  width: 270px;
+  width: 100%;
+  height: 190px;
+  height: 100%;
+  background-color: #eed5b6;
+  background-color: var(--black);
+  background-color: #3b3733;
+  background-color: #7d4d25;
+  background-color: #dd137b;
+  background-color: #3b3733;
+  background-color: #7d4d25;
+  border-radius: 48px;
+  /* float: left; */
+}
+
+/* Video element is nested within television__screen. */
+video {
+  box-sizing: border-box;
+  overflow: hidden;
+  /* border: 10px solid; */
+  border-radius: 50px;
+  transform: scaleX(1.25);
+}
+
+.television__base {
+  width: 60%;
+  margin: auto;
+}
+
+.television__base:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.television__foot {
+  width: 20px;
+  height: 70px;
+  margin-top: -35px;
+  background-color: #7d4d25;
+  border: solid 3px #eed5b6;
+  border: solid 3px black;
+  border-radius: 48px;
+}
+
+.television__foot--left {
+  transform: rotate(30deg);
+  float: left;
+}
+
+.television__foot--right {
+  transform: rotate(-30deg);
+  float: right;
+}
+
+.p {
+  margin-top: 70px;
+}
+
+/* #endregion */
+/* #endregion */
+
+/*#region Slide 2: Discovering Coaching */
+
+.slide_2--text {
+  align-self: center;
+  width: 50%;
+}
+
+.slide_2--text p {
+  max-width: 55ch;
+}
+
+.slide_2--image {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+.slide_2--image img {
+  width: 100%;
+}
+
+.slide_2--image div.adler {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.slide_2--image div.rcb {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin-top: 25px;
+}
+
+.slide_2--image div.rcb img {
+  width: 60%;
+  height: 75%;
+}
+
+.slide_2--image div.adler img {
+  height: 80%;
+}
+
+.slide_2--image span {
+  text-align: center;
+  /* align-self: center; */
+  padding-top: 5px;
+  font-size: 0.9rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* #endregion */
+
+/* #region Slide 3: INCF & Coach U Certifications & Coach Bernadette As A Young Mom with Parenting Recipes */
+
+.slide_3--text {
+  align-self: center;
+  width: 50%;
+}
+
+.slide_3--image {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.slide_3--image img {
+  width: 90%;
+}
+
+.slide_3--image div.young_coach_bernadette_mom,
+.slide_3--image div.parenting_recipes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.slide_3--image img {
+  width: 250px;
+  height: 200px;
+  border-radius: var(--border_radius);
+}
+
+.slide_3--image div.parenting_recipes {
+  margin-top: 25px;
+}
+
+.slide_3--image span {
+  text-align: center;
+  width: 250px;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.slide_3--image span#parenting_recipes_title {
+  font-style: italic;
+}
+
+/* #endregion */
+
+/* #region Slide 4: "Sometimes forever isn't isn't forever, after all." */
+
+.slide_4--text {
+  align-self: center;
+  width: 60%;
+}
+
+.slide_4--text p {
+  max-width: 55ch;
+}
+
+.slide_4--text .slide--bio_text {
+  display: flex;
+  flex-direction: column;
+  /* align-self: center; */
+}
+
+.slide_4--image {
+  display: flex;
+  width: 40%;
+  min-width: 350px;
+  min-height: 300px;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+/* #region Slide 4: Sass Rain Cloud */
+/* aexcodes CSS from "Thunderstorm Weather Icon | HTML, CSS" Codepen:
+	https://codepen.io/aexcode/pen/vYyQNWQ */
+
+.slide_4--image .container {
+  width: 80%;
+}
+.slide_4--image .container .canvas {
+  position: relative;
+  padding-top: 100%;
+  background: var(--brand_color_1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Rain cloud middle "cotton ball". */
+.slide_4--image .cloud {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 27.5%;
+  left: 30%;
+  background: #fffafa;
+  border-radius: 44% 56% 49% 51% / 71% 63% 37% 29%;
+  animation: cloudColorChange 3s linear infinite;
+}
+
+/* Rain cloud left "cotton ball". */
+.slide_4--image .cloud:before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 10%;
+  left: -50%;
+  right: -50%;
+  background: inherit;
+  right: unset;
+  border-radius: 52% 48% 58% 42% / 43% 61% 39% 57%;
+}
+
+/* Rain cloud right "cotton ball". */
+.slide_4--image .cloud:after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 10%;
+  left: -50%;
+  right: -50%;
+  background: inherit;
+  left: unset;
+  border-radius: 52% 48% 49% 51% / 43% 61% 39% 57%;
+}
+
+.slide_4--image .cloud .cloud-copy {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+.slide_4--image .cloud .cloud-copy:before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 10%;
+  left: -50%;
+  right: -50%;
+  background: inherit;
+  right: unset;
+  border-radius: 52% 48% 58% 42% / 43% 61% 39% 57%;
+}
+.slide_4--image .cloud .cloud-copy:after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 10%;
+  left: -50%;
+  right: -50%;
+  background: inherit;
+  left: unset;
+  border-radius: 52% 48% 49% 51% / 43% 61% 39% 57%;
+}
+.slide_4--image .cloud .rain {
+  position: absolute;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  top: 80%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.slide_4--image .cloud .rain .lightning {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: lightningFlash 2s linear infinite;
+}
+
+.slide_4--image .cloud .rain .lightning:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 50%;
+  left: 47%;
+  top: 5%;
+  right: 47%;
+  bottom: 5%;
+  transform: rotate(20deg);
+  background: #fcd422;
+  bottom: unset;
+  right: unset;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.slide_4--image .cloud .rain .lightning:after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 50%;
+  left: 47%;
+  top: 5%;
+  right: 47%;
+  bottom: 5%;
+  transform: rotate(20deg);
+  background: #fcd422;
+  top: unset;
+  left: unset;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+/* #endregion */
+/* #region Slide 4: Sass Rain Cloud: .cloud nth-of-types */
+
+.cloud .rain .drop:nth-of-type(1) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 1s linear infinite;
+  left: 10%;
+}
+.cloud .rain .drop:nth-of-type(2) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s linear infinite;
+  left: 28.5%;
+}
+.cloud .rain .drop:nth-of-type(3) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 1s linear infinite;
+  left: 47%;
+}
+.cloud .rain .drop:nth-of-type(4) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s linear infinite;
+  right: 28.5%;
+}
+.cloud .rain .drop:nth-of-type(5) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 1s linear infinite;
+  right: 10%;
+}
+.cloud .rain .drop:nth-of-type(6) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 2s linear infinite;
+  left: 28.5%;
+}
+.cloud .rain .drop:nth-of-type(7) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 2s linear infinite;
+  right: 28.5%;
+}
+.cloud .rain .drop:nth-of-type(8) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 3s linear infinite;
+  left: 10%;
+}
+.cloud .rain .drop:nth-of-type(9) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 3s linear infinite;
+  left: 47%;
+}
+.cloud .rain .drop:nth-of-type(10) {
+  position: absolute;
+  width: 3%;
+  height: 20%;
+  top: -20%;
+  background: #fffafa;
+  border-radius: 1rem;
+  transform: rotate(22deg);
+  animation: rainDropFall 4s 3s linear infinite;
+  right: 10%;
+}
+
+/* #endregion */
+/* #region Slide 4: Sass Rain Cloud: Keyframes */
+@keyframes cloudColorChange {
+  0%,
+  100% {
+    background: #fffafa;
+  }
+  50% {
+    background: #a3a3a3;
+  }
+}
+
+@keyframes rainDropFall {
+  15% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+@keyframes lightningFlash {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+/* #endregion */
+/* #endregion */
+
+/* #region Slide 5: "Little girls with dreams become women with vision*/
+
+.slide_5--text {
+  align-self: center;
+  width: 50%;
+}
+
+.slide_5--image {
+  position: relative;
+  width: 50%;
+  min-width: 350px;
+  min-height: 350px;
+}
+
+/* #region Slide 5: Sass Rocket Ship */
+
+.rocket {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 10%;
+  left: 55%;
+}
+
+/* #region Slide 5: Sass Rocket Ship: Tank */
+
+.external-tank {
+  width: 30px;
+  height: 100px;
+  background: #d49459;
+  position: absolute;
+  border-radius: 15px 15px 0 0;
+  box-shadow: inset 5px 5px 0 #b17e4d;
+  z-index: 4;
+}
+.external-tank:before {
+  content: "";
+  border: 15px solid transparent;
+  border-top: 15px solid #d49459;
+  position: absolute;
+  bottom: -30px;
+}
+.external-tank:after {
+  content: "";
+  border: 15px solid transparent;
+  border-bottom: 15px solid #898a88;
+  position: absolute;
+  bottom: -20px;
+}
+.external-tank .rocket-booster {
+  width: 8px;
+  height: 100px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  z-index: 2;
+  margin-left: -4px;
+  -webkit-filter: drop-shadow(#cfcece -2px 0 0);
+}
+.external-tank .rocket-booster:before {
+  content: "";
+  border: 4px solid transparent;
+  border-bottom: 8px solid #fff;
+  position: absolute;
+  top: -12px;
+  left: 0px;
+}
+.external-tank .rocket-booster:after {
+  content: "";
+  border: 8px solid transparent;
+  border-bottom: 12px solid #fff;
+  position: absolute;
+  bottom: -6px;
+  left: -4px;
+}
+
+/* #endregion */
+
+/* #region Slide 5: Sass Rocket Ship: Shuttle */
+
+.shuttle {
+  width: 30px;
+  height: 100px;
+  background: #fff;
+  position: absolute;
+  left: 32px;
+  top: 15px;
+  border-radius: 3px 50px 0 0;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 1) 0 0 2px);
+  box-shadow: inset 3px 0 1px rgba(0, 0, 0, 0.2), inset 1px 0 0 rgba(0, 0, 0, 1);
+  z-index: 3;
+}
+.shuttle:before {
+  content: "";
+  width: 10px;
+  height: 30px;
+  border-radius: 0 0 80% 3px;
+  background: #fff;
+  position: absolute;
+  bottom: -8px;
+  right: -10px;
+  transform: rotate(-45deg);
+}
+.shuttle:after {
+  content: "";
+  width: 1px;
+  height: 40px;
+  background: rgba(50, 50, 50, 0.1);
+  position: absolute;
+  left: 5px;
+  top: 50%;
+}
+.shuttle .window {
+  width: 8px;
+  height: 30px;
+  background: #000;
+  position: absolute;
+}
+.shuttle .window:before {
+  content: "";
+  width: 5px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  transform: rotate(10deg);
+  border-radius: 2px 8px 0 0;
+  left: 14px;
+  top: 5px;
+}
+
+.shuttle .window:after {
+  content: "";
+}
+
+/* #endregion */
+
+/* #region Slide 5: Sass Rocket Ship: Thrusters */
+.thrusters {
+  position: absolute;
+  top: 70%;
+  left: 30px;
+  border: 8px solid transparent;
+  border-bottom: 15px solid #9d9e9d;
+  z-index: 2;
+}
+.thrusters:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 5px;
+  border: 8px solid transparent;
+  border-bottom: 15px solid #9d9e9d;
+}
+.thrusters:after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -5px;
+  border: 11px solid transparent;
+  border-bottom: 20px solid #8c8d8b;
+}
+/* #endregion */
+
+/* #region Slide 5: Sass Rocket Ship: Flames */
+.flames {
+  width: 44px;
+  height: 120px;
+  background: #ce7e3d;
+  position: absolute;
+  top: 116px;
+  left: -6px;
+  border-radius: 60% 60% 100% 100%;
+  z-index: 0;
+}
+.flames:before {
+  content: "";
+  width: 30px;
+  height: 110px;
+  position: absolute;
+  left: 10px;
+  background: #e0b144;
+  border-radius: 100%;
+}
+.flames:after {
+  content: "";
+  width: 25px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  background: #f8e546;
+  border-radius: 100%;
+}
+.flames.right {
+  left: 23px;
+  top: 114px;
+  z-index: 0;
+  height: 150px;
+}
+.flames.right:before {
+  height: 140px;
+}
+.flames.right:after {
+  height: 130px;
+}
+
+/* #endregion */
+
+/* #region Slide 5: Space Shuttle Smoke */
+.smoke {
+  position: absolute;
+  top: 132px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+}
+.smoke .s-1 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_1);
+  width: 22px;
+  height: 22px;
+  top: -4px;
+  left: -3px;
+  z-index: 2;
+}
+.smoke .s-2 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_2);
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  left: -3px;
+  z-index: 2;
+}
+.smoke .s-3 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_1);
+  width: 22px;
+  height: 22px;
+  top: 8px;
+  left: -1px;
+  z-index: 2;
+}
+.smoke .s-4 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_2);
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  left: -1px;
+  z-index: 2;
+}
+.smoke .s-5 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_1);
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  left: -15px;
+  z-index: 2;
+}
+.smoke .s-6 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_2);
+  width: 50px;
+  height: 50px;
+  top: 35px;
+  left: -5px;
+  z-index: 2;
+}
+.smoke .s-7 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_1);
+  width: 50px;
+  height: 50px;
+  top: 35px;
+  left: -25px;
+  z-index: 2;
+}
+.smoke .s-8 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_2);
+  width: 80px;
+  height: 80px;
+  top: 65px;
+  left: -45px;
+  z-index: 2;
+}
+.smoke .s-9 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_1);
+  width: 90px;
+  height: 90px;
+  top: 65px;
+  left: 15px;
+  z-index: 2;
+}
+.smoke .s-10 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_2);
+  width: 150px;
+  height: 150px;
+  top: 95px;
+  left: -70px;
+  z-index: 2;
+}
+.smoke .s-11 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_1);
+  width: 180px;
+  height: 180px;
+  top: 130px;
+  left: -25px;
+  z-index: 2;
+}
+.smoke .s-12 {
+  border-radius: 50%;
+  position: absolute;
+  background: #adadac;
+  background: var(--brand_color_2);
+  width: 50px;
+  height: 50px;
+  top: 35px;
+  left: -25px;
+  z-index: 2;
+}
+.smoke .s-13 {
+  border-radius: 50%;
+  position: absolute;
+  background: #878887;
+  background: var(--brand_color_1);
+  width: 110px;
+  height: 110px;
+  top: 105px;
+  left: 50px;
+  z-index: 1;
+}
+.smoke .s-14 {
+  border-radius: 50%;
+  position: absolute;
+  background: #878887;
+  background: var(--brand_color_2);
+  width: 160px;
+  height: 160px;
+  top: 140px;
+  left: 60px;
+  z-index: 1;
+}
+.smoke .s-15 {
+  border-radius: 50%;
+  position: absolute;
+  background: #878887;
+  background: var(--brand_color_1);
+  width: 90px;
+  height: 90px;
+  top: 95px;
+  left: -85px;
+  z-index: 1;
+}
+.smoke .s-16 {
+  border-radius: 50%;
+  position: absolute;
+  background: #878887;
+  background: var(--brand_color_2);
+  width: 50px;
+  height: 50px;
+  top: 155px;
+  left: 180px;
+  z-index: 1;
+}
+.smoke .s-17 {
+  border-radius: 50%;
+  position: absolute;
+  background: #878887;
+  background: var(--brand_color_1);
+  width: 50px;
+  height: 50px;
+  top: 175px;
+  left: 195px;
+  z-index: 1;
+}
+.smoke .s-18 {
+  border-radius: 50%;
+  position: absolute;
+  background: #878887;
+  background: var(--brand_color_2);
+  width: 110px;
+  height: 110px;
+  top: 125px;
+  left: -105px;
+  z-index: 1;
+}
+.smoke .s-19 {
+  border-radius: 50%;
+  position: absolute;
+  background: #c3c4c3;
+  background: var(--brand_color_1);
+  width: 50px;
+  height: 50px;
+  top: 155px;
+  left: 0px;
+  z-index: 3;
+}
+.smoke .s-20 {
+  border-radius: 50%;
+  position: absolute;
+  background: #c3c4c3;
+  background: var(--brand_color_1);
+  width: 110px;
+  height: 110px;
+  top: 155px;
+  left: -80px;
+  z-index: 3;
+}
+
+/* #endregion */
+
+/* #endregion */ /* THIS #endregion IS NOT REDUDANT!  DO NOT DELETE! */
+
+/* #endregion */
+
+/* #region Slide 6: "It wasn't easy ..." */
+
+.slide_6--text {
+  align-self: center;
+  width: 50%;
+}
+
+.slide_6--image {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* #region Slide 6: CSS Dating App Mockup */
+div.dating-app--2 {
+  max-width: 400px;
+  background: var(--grey);
+}
+
+div.dating-app--2 .dating__logo--2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border-radius: 15px;
+  padding-bottom: 30px;
+  box-shadow: 0 1rem 4rem rgba(13, 14, 28, 0.35);
+  background: white;
+  font-size: 1.2rem;
+}
+
+div.dating-app--2 .dating__logo--2 img {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+}
+
+div.dating-app--2 .dating__logo--2 span.dating__slogan-1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+div.dating-app--2 .dating__logo--2 span.dating__slogan-2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+form.dating__form--2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+}
+
+form.dating__form--2 input.dating__inp--2 {
+  text-align: center;
+  width: 75%;
+  border: 0;
+  border-bottom: 1px solid #e9e7fc;
+  padding: 1.25rem 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d0e1c;
+}
+
+form.dating__form--2 .dating__forgot-pwd {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+form.dating__form--2 .dating__forgot-pwd:hover {
+  color: black;
+  text-decoration: none;
+}
+
+div.dating__footer--2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.dating__footer--2 a {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+div.dating__footer--2 span.dating__account {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.btn {
+  border-radius: 4px;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  transition: background-color 0.2s linear;
+  color: var(--white);
+  font-weight: 700;
+}
+
+form.dating__form--2 .btn--primary {
+  width: 25%;
+  height: 35px;
+  margin-top: 15px;
+  border: 0;
+  background: var(--brand_color_1);
+}
+
+div.dating__footer--2 .btn--secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 45px;
+  margin-top: 15px;
+  background: var(--brand_color_1);
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Slide 7: Random Dating */
+
+.slide_7--text {
+  display: flex;
+  width: 55%;
+  justify-content: center;
+}
+
+.slide_7--image {
+  display: flex;
+  width: 40%;
+  min-height: 500px;
+}
+
+.slide_7--image .dice_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* #region Slide 7: Plenty of Bad Dates: CSS Dice Animation */
+
+.slide_7--image li {
+  list-style-type: none;
+}
+
+.ui {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  perspective: 400px;
+  /* Filter / Drop-Shadow created double in original animation? */
+  /* filter: drop-shadow(300px 0px 0px #fff); */
+  transform: translateX(-150px);
+}
+.ui .dice {
+  transform-style: preserve-3d;
+  animation: rotate 10000ms linear infinite;
+  animation: rotate 20000ms linear infinite;
+}
+.ui .dice_list {
+  transform: translateY(-75px) translateX(-75px);
+  transform-style: preserve-3d;
+}
+.ui .dice_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  border: 10px double var(--brand_color_2);
+  background: var(--brand_color_1);
+  font-size: 4rem;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+.ui .dice_item[data-id="1"] {
+  transform: translateZ(75px);
+}
+.ui .dice_item[data-id="2"] {
+  transform: translateY(75px) rotateX(270deg);
+}
+.ui .dice_item[data-id="3"] {
+  transform: translateX(75px) rotateY(-270deg);
+}
+.ui .dice_item[data-id="4"] {
+  transform: translateX(-75px) rotateY(-90deg);
+}
+.ui .dice_item[data-id="5"] {
+  transform: translateY(-75px) rotateX(90deg);
+}
+.ui .dice_item[data-id="6"] {
+  transform: translateZ(-75px) rotateY(180deg);
+  /* text-decoration: underline; */
+}
+
+/* #endregion */
+
+/* #region Slide 7: Plenty of Bad Dates: CSS Dice Animation: Keyframes */
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(720deg);
+  }
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Slide 8: Deliberate Dating */
+
+.slide_8--text {
+  width: 50%;
+}
+
+.slide_8--image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  /* min-height: 100vh; */
+  font-size: 2rem;
+  overflow-x: hidden;
+}
+
+.slide_8--image label {
+  font-size: inherit;
+  font-size: 2rem;
+}
+
+.toggle,
+      .toggle-checkbox,
+      .toggle-btn
+      
+      /* #region Sass: Good/Bad Pick Toggles */
+      
+      
+      .toggle {
+  position: relative;
+  width: 1em;
+  width: 55%;
+  height: 0.1em;
+  height: 0.3em;
+  height: 1.5em;
+  border-radius: 0.5em;
+  border: 0.015em solid #9f9f9f;
+  background-image: linear-gradient(#f2f2f2, #fff, #f2f2f2);
+  margin: 0.26em 0.15em;
+  cursor: pointer;
+  filter: drop-shadow(0.015em 0.015em 0.01em rgba(0, 0, 0, 0.3));
+  margin-bottom: 25px;
+}
+
+.toggle-btn::after {
+  position: absolute;
+  top: -0.14rem;
+  top: -10px;
+  left: 0;
+  width: 50%;
+  font-size: 0.35em;
+  font-size: 2.25em;
+  /* font-size: 2.5em; */
+  text-align: center;
+  transition: all 500ms cubic-bezier(0.34, 0.78, 0.55, 1.4);
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Controls how far along toggle bar toggled emojis move. */
+.toggle-checkbox:checked + .toggle-btn::after {
+  left: 50%;
+}
+
+/* Happy/Sad Toggle */
+
+.happy-sad .toggle-btn::after {
+  content: "😁";
+}
+
+.happy-sad .toggle-checkbox:checked + .toggle-btn::after {
+  content: "😭";
+}
+
+/* Love/Hate Toggle */
+
+.love-hate .toggle-btn::after {
+  content: "😍";
+}
+
+.love-hate .toggle-checkbox:checked + .toggle-btn::after {
+  content: "😡";
+}
+
+/* Nerd/Cool Toggle */
+
+.nerd-cool .toggle-btn::after {
+  content: "😎";
+}
+
+.nerd-cool .toggle-checkbox:checked + .toggle-btn::after {
+  content: "🤓";
+}
+
+/* Heart/Break Toggle */
+
+.heart-break .toggle-btn::after {
+  content: "💘";
+}
+
+.heart-break .toggle-checkbox:checked + .toggle-btn::after {
+  content: "💔";
+}
+
+/* Thumbs Up/Down Toggle */
+
+.thumbs-up-down .toggle-btn::after {
+  content: "👍";
+}
+
+.thumbs-up-down .toggle-checkbox:checked + .toggle-btn::after {
+  content: "👎";
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Slide 9: Hit Pause */
+
+.slide_9 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.slide_9 p {
+  margin: 15px;
+}
+
+.slide_9--text {
+  width: 50%;
+}
+
+.slide_9--image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 40%;
+  max-width: 500px;
+  height: 350px;
+  border-radius: var(--border_radius);
+  background: var(--brand_color_1);
+}
+
+.slide_9--image img {
+  width: 15%;
+  margin-right: 10px;
+  /* transform: scale(0.25); */
+  transform: scale(0.5);
+}
+
+/* Slide 9: Sass: VCR Paused */
+
+@font-face {
+  font-family: "VCR";
+  src: url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.eot?6300736268315524562");
+  src: url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.woff?6300736268315524562")
+      format("woff"),
+    url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.ttf?6300736268315524562")
+      format("truetype"),
+    url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.svg?6300736268315524562#VCR")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1.slide_9--image-paused {
+  font-family: "VCR", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 100vh; */
+  font-size: 5rem;
+  filter: blur(0.6px);
+  /* animation: glitch 0.1s infinite linear; */
+  /* animation: verticalglitch 3s infinite linear; */
+  animation: blinking 5s steps(5, start) infinite;
+  text-shadow: 0px 0px 3px #333333;
+  text-shadow: 0px 0px 3px var(--black);
+  font-weight: lighter;
+  /* text-shadow: -1px 0 red, 0 1px red, 1px 0 yellow, 0 -1px blue; */
+}
+
+@keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-0.5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(0.5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes verticalglitch {
+  0% {
+    transform: translateY(0px);
+  }
+  49% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(9px);
+  }
+  51% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* #endregion */
+
+/* #region Slide 10: "I read book after book on relationships ..." */
+
+.slide_10--text {
+  width: 50%;
+}
+
+.slide_10--image {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 350px;
+}
+
+/* #region Slide 10 *: Sass Books */
+
+/* The CSS below was the original div#books in the code I found on Codepen.
+	  I had to comment it this out because the div#books:before pseudo-element 
+	  was actually where all the color in the image was implemented. 
+	  Div#books is just a greyed out background the flashlight beam projects onto. */
+
+/* The CSS styling below created the flashlight beam in this picture, 
+	    before I eliminated the ":before" selector & commented out 
+	    various properties within that selector. */
+
+div.books {
+  width: 350px;
+  height: 350px;
+  border-radius: var(--border_radius);
+  background-color: #111;
+  background-image: linear-gradient(
+      to top,
+      #d2b48c 5%,
+      #111 6%,
+      #111 7%,
+      transparent 7%
+    ),
+    linear-gradient(to bottom, #111 30%, transparent 30%),
+    linear-gradient(to right, #b22222, #871a1a 5%, transparent 5%),
+    linear-gradient(
+      to right,
+      transparent 6%,
+      #ff6347 6%,
+      #ff3814 9%,
+      transparent 9%
+    ),
+    linear-gradient(
+      to right,
+      transparent 27%,
+      #556b2f 27%,
+      #39481f 34%,
+      transparent 34%
+    ),
+    linear-gradient(
+      to right,
+      transparent 51%,
+      #fa8072 51%,
+      #f85441 57%,
+      transparent 57%
+    ),
+    linear-gradient(to bottom, #111 35%, transparent 35%),
+    linear-gradient(
+      to right,
+      transparent 42%,
+      #008080 42%,
+      #004d4d 44%,
+      transparent 44%
+    ),
+    linear-gradient(
+      to right,
+      transparent 45%,
+      #008080 45%,
+      #004d4d 47%,
+      transparent 47%
+    ),
+    linear-gradient(
+      to right,
+      transparent 48%,
+      #008080 48%,
+      #004d4d 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to right,
+      transparent 87%,
+      #789 87%,
+      #4f5d6a 91%,
+      transparent 91%
+    ),
+    linear-gradient(to bottom, #111 37.5%, transparent 37.5%),
+    linear-gradient(
+      to right,
+      transparent 14%,
+      #bdb76b 14%,
+      #989244 20%,
+      transparent 20%
+    ),
+    linear-gradient(to bottom, #111 40%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 10%,
+      #808000 10%,
+      #4d4d00 13%,
+      transparent 13%
+    ),
+    linear-gradient(
+      to right,
+      transparent 21%,
+      #8b4513 21%,
+      #5e2f0d 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      to right,
+      transparent 58%,
+      #8b4513 58%,
+      #5e2f0d 64%,
+      transparent 64%
+    ),
+    linear-gradient(
+      to right,
+      transparent 92%,
+      #2f4f4f 92%,
+      #1c2f2f 95%,
+      transparent 95%
+    ),
+    linear-gradient(to bottom, #111 48%, transparent 48%),
+    linear-gradient(
+      to right,
+      transparent 96%,
+      #2f4f4f 96%,
+      #1c2f2f 99%,
+      transparent 99%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 68.5%,
+      transparent 76%,
+      #111 76%,
+      #111 77.5%,
+      transparent 77.5%,
+      transparent 86%,
+      #111 86%,
+      #111 87.5%,
+      transparent 87.5%
+    ),
+    linear-gradient(
+      to right,
+      transparent 35%,
+      #cd5c5c 35%,
+      #bc3a3a 41%,
+      transparent 41%
+    ),
+    linear-gradient(to bottom, #111 68%, transparent 68%),
+    linear-gradient(
+      to right,
+      transparent 78%,
+      #bc8f8f 78%,
+      #bc8f8f 80%,
+      transparent 80%,
+      transparent 82%,
+      #bc8f8f 82%,
+      #bc8f8f 83%,
+      transparent 83%
+    ),
+    linear-gradient(
+      to right,
+      transparent 66%,
+      #a52a2a 66%,
+      #7c2020 85%,
+      transparent 85%
+    );
+  background-size: 300px 150px;
+  background-position: center bottom;
+  /* clip-path: circle(150px at center center); */
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Slide 11: Discovering The Importance of Compatibility  */
+
+.slide_11--text {
+  width: 50%;
+}
+
+.slide_11--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.slide_11--image img {
+  border-radius: var(--border_radius);
+}
+
+/* #endregion */
+
+/* #region Slide 12: "Armed with this newfound understanding, I re-entered the online dating scene." */
+
+.slide_12 {
+  justify-content: space-around;
+}
+
+.slide_12--text {
+  width: 50%;
+}
+
+.slide_12--image {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.slide_12--image span.slide--instructions {
+  margin-top: 25px;
+}
+
+/* #region Slide 12: Sass */
+
+/* image sprites */
+.circle {
+  cursor: pointer;
+  width: 315px;
+  height: 315px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mask-a,
+.mask-b {
+  border-radius: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mask-a {
+  background: rgba(27, 45, 65, 1);
+  background: #dd137b;
+  background: var(--brand_color_1);
+  overflow: hidden;
+  -webkit-mask-position: 0 0;
+  -webkit-mask-size: 215px 215px;
+  -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mask_svg.svg);
+  z-index: 10;
+}
+.mask-b {
+  background: rgba(27, 45, 65, 1);
+}
+
+.fish-green,
+.fish-red,
+.fish-yellow,
+.hook,
+.rope {
+  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/fish.svg)
+	  no-repeat; */
+  background: url(../images/svg_paths/fish_svg-1.svg) no-repeat;
+  position: absolute;
+}
+.bubble {
+  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/bubble_2.svg)
+	  no-repeat center center; */
+  background: url(../images/svg_paths/fish_svg-2.svg) no-repeat center center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -107.5px;
+  margin-left: -107.5px;
+  width: 215px;
+  height: 215px;
+}
+.fish-green {
+  background-position: 0px -50px;
+  top: 6.5em;
+  right: -1em;
+  width: 46px;
+  height: 21px;
+  transition: transform 550ms ease;
+}
+.fish-red {
+  background-position: 0px -25px;
+  top: 4em;
+  left: 0.6em;
+  width: 56px;
+  height: 26px;
+  transition: transform 550ms ease;
+}
+.fish-yellow {
+  background-position: 0px 0px;
+  top: 10.4em;
+  left: 4em;
+  width: 56px;
+  height: 26px;
+  transition: transform 550ms ease;
+}
+.fishing {
+  position: relative;
+  margin: -4em auto 0 auto;
+  width: 69px;
+  height: inherit;
+  transition: transform 550ms ease;
+}
+.fishing .hook {
+  background-position: -56px 0px;
+  top: 5.4em;
+  left: 0;
+  width: 70px;
+  height: 124px;
+  transform-origin: center 22px;
+  transition: transform 550ms ease;
+}
+.fishing .rope {
+  background-position: -127px 0px;
+  top: 0em;
+  left: 50%;
+  margin-left: -3px;
+  width: 12px;
+  height: 100px;
+  transition: transform 550ms ease;
+}
+.circle:hover > .mask-a > .fishing {
+  transform: translate3d(0, 2.6em, 0);
+  transition: transform 750ms cubic-bezier(0.68, -0.55, 0.265, 1.65);
+}
+.circle:hover > .mask-a > .fishing > .hook {
+  animation: rot 975ms 300ms ease-in-out;
+}
+.circle:hover > .mask-a > .fish-green {
+  transform: translate3d(-1.8em, 0, 0) rotateZ(0deg);
+  transition: transform 750ms ease;
+}
+.circle:hover > .mask-a > .fish-red {
+  transform: translate3d(1em, 0, 0) rotateZ(0deg);
+  transition: transform 750ms ease;
+}
+.circle:hover > .mask-a > .fish-yellow {
+  transform: translate3d(-4.3em, -1.5em, 0) rotateZ(0deg);
+  transition: transform 750ms ease;
+}
+@keyframes rot {
+  25% {
+    transform: translate3d(0, 0, 0) rotateZ(-8deg);
+  }
+  75% {
+    transform: translate3d(0, 0, 0) rotateZ(2deg);
+  }
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Slide 13: "In the end, I finally found my happy ending!" */
+
+.slide_13--text {
+  width: 50%;
+}
+
+.slide_13--image {
+  justify-content: center;
+  width: 50%;
+  height: 250px;
+  /* background-color: #ddd; */
+  position: relative;
+  /* height: 100vh; */
+}
+
+/* #region Slide 13: Sass Wedding Ring */
+
+/* body {
+	background-color: #ddd;
+	position: relative;
+	height: 100vh;
+      } */
+.wedding_ring {
+  box-sizing: border-box;
+  width: 200px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: 30px;
+  background-color: white;
+  background-color: var(--brand_color_1);
+  /* background-image: linear-gradient(
+	    to bottom,
+	    transparent 15px,
+	    black 15px,
+	    black 17px,
+	    transparent 17px
+	  ),
+	  linear-gradient(to left, white 80%, transparent 80%),
+	  radial-gradient(circle, black 20%, transparent 20%),
+	  radial-gradient(circle, black 20%, transparent 20%); */
+  background-size: 100% 100%, 100% 100%, 10px 10px, 10px 10px;
+  background-position: 0 0, 0 0, 0 0, 5px 5px;
+  border-radius: 5px 5px 20px 20px;
+  border: 5px solid black;
+  z-index: 1;
+}
+.wedding_ring:before,
+.wedding_ring:after {
+  display: block;
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.wedding_ring:before {
+  width: 200px;
+  height: 70px;
+  left: 50%;
+  bottom: 70px;
+  margin-left: -100px;
+  background-color: #aaa;
+  background-color: #dd137b;
+  background-image: radial-gradient(
+      circle,
+      transparent 26px,
+      black 26px,
+      black 29px,
+      white 29px,
+      white 36px,
+      black 36px,
+      black 39px,
+      transparent 39px
+    ),
+    linear-gradient(to bottom, black, black),
+    linear-gradient(to bottom, black, black),
+    linear-gradient(
+      45deg,
+      transparent 10px,
+      black 10px,
+      black 12px,
+      transparent 12px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 10px,
+      black 10px,
+      black 12px,
+      transparent 12px
+    ),
+    linear-gradient(to right, black, black),
+    linear-gradient(
+      45deg,
+      transparent 10px,
+      black 10px,
+      black 13px,
+      white 13px,
+      white 100%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 10px,
+      black 10px,
+      black 13px,
+      white 13px,
+      white 100%
+    ),
+    linear-gradient(
+      -45deg,
+      white 13px,
+      black 13px,
+      black 16px,
+      transparent 16px,
+      transparent 100%
+    ),
+    linear-gradient(
+      45deg,
+      white 13px,
+      black 13px,
+      black 16px,
+      transparent 16px,
+      transparent 100%
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.3) 20%, transparent 20%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.3) 20%, transparent 20%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 20px, transparent 20px),
+    linear-gradient(to top, rgba(255, 255, 255, 0.5) 20px, transparent 20px),
+    linear-gradient(-145deg, transparent 17px, white 17px),
+    linear-gradient(-35deg, transparent 17px, white 17px),
+    linear-gradient(145deg, transparent 17px, white 17px),
+    linear-gradient(35deg, transparent 17px, white 17px);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 100px 100px, 20px 3px, 34px 2px, 20px 7px, 20px 7px, 2px 14px,
+    24px 15px, 24px 15px, 24px 10px, 24px 10px, 10px 10px, 10px 10px, 100% 100%,
+    100% 100%, 30px 60%, 30px 60%, 30px 60%, 30px 60%;
+  background-position: center bottom -50px, center bottom 59px,
+    center bottom 51px, left 78px bottom 52px, right 78px bottom 52px,
+    center bottom 38px, left 75px bottom 37px, right 75px bottom 37px,
+    left 73px bottom 52px, right 73px bottom 52px, left bottom,
+    left 5px bottom 5px, left top, left bottom, left top, left bottom, right top,
+    right bottom;
+  border-radius: 20px;
+  border: 5px solid black;
+  box-shadow: inset -30px 30px 10px rgba(0, 0, 0, 0.3);
+  animation: inside 10000ms infinite;
+}
+.wedding_ring:after {
+  width: 200px;
+  height: 80px;
+  left: 50%;
+  bottom: 75px;
+  margin-left: -100px;
+  background-color: white;
+  background-color: #dd137b;
+  /* background-image: linear-gradient(to left, white 80%, transparent 80%),
+	  radial-gradient(circle, black 20%, transparent 20%),
+	  radial-gradient(circle, black 20%, transparent 20%); */
+  background-size: 100% 100%, 10px 10px, 10px 10px;
+  background-position: 0 0, 0 0, 5px 5px;
+  border-radius: 20px 20px 5px 5px;
+  border: 5px solid black;
+  animation: lid 10000ms infinite;
+}
+
+/* #endregion */
+
+/* #region Slide 13: Sass: Wedding Ring: Keyframes */
+@-moz-keyframes lid {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+    z-index: auto;
+  }
+  3% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    z-index: -1;
+  }
+  65% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    animation-timing-function: ease-out;
+    z-index: -1;
+  }
+  68% {
+    transform: translateY(0);
+    height: 80px;
+    border-radius: 20px 20px 5px 5px;
+    z-index: auto;
+  }
+}
+@-webkit-keyframes lid {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+    z-index: auto;
+  }
+  3% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    z-index: -1;
+  }
+  65% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    animation-timing-function: ease-out;
+    z-index: -1;
+  }
+  68% {
+    transform: translateY(0);
+    height: 80px;
+    border-radius: 20px 20px 5px 5px;
+    z-index: auto;
+  }
+}
+@-o-keyframes lid {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+    z-index: auto;
+  }
+  3% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    z-index: -1;
+  }
+  65% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    animation-timing-function: ease-out;
+    z-index: -1;
+  }
+  68% {
+    transform: translateY(0);
+    height: 80px;
+    border-radius: 20px 20px 5px 5px;
+    z-index: auto;
+  }
+}
+@keyframes lid {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+    z-index: auto;
+  }
+  3% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    z-index: -1;
+  }
+  65% {
+    transform: translateY(-130px);
+    height: 30px;
+    border-radius: 45px 45px 10px 10px;
+    animation-timing-function: ease-out;
+    z-index: -1;
+  }
+  68% {
+    transform: translateY(0);
+    height: 80px;
+    border-radius: 20px 20px 5px 5px;
+    z-index: auto;
+  }
+}
+@-moz-keyframes inside {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  3% {
+    height: 150px;
+  }
+  65% {
+    height: 150px;
+    animation-timing-function: ease-out;
+  }
+  68% {
+    height: 70px;
+  }
+}
+@-webkit-keyframes inside {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  3% {
+    height: 150px;
+  }
+  65% {
+    height: 150px;
+    animation-timing-function: ease-out;
+  }
+  68% {
+    height: 70px;
+  }
+}
+@-o-keyframes inside {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  3% {
+    height: 150px;
+  }
+  65% {
+    height: 150px;
+    animation-timing-function: ease-out;
+  }
+  68% {
+    height: 70px;
+  }
+}
+@keyframes inside {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  3% {
+    height: 150px;
+  }
+  65% {
+    height: 150px;
+    animation-timing-function: ease-out;
+  }
+  68% {
+    height: 70px;
+  }
+}
+/* #endregion */
+
+/* #endregion */
+
+/* #region Slide 14: "As my relationship with Stu deepened ..." */
+
+.slide_14 {
+  justify-content: space-around;
+}
+
+.slide_14--text {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.slide_14--image {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+.slide_14--image img {
+  width: 315px;
+  height: 315px;
+}
+
+/* #endregion */
+
+/* #region Slide 15: "True love stories never end!" */
+
+.slide_15--text {
+  justify-content: center;
+  width: 50%;
+}
+
+.slide_15--image {
+  flex-direction: column !important;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.slide_15--image img {
+  width: 50%;
+}
+
+.slide_15--image p {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 1.25rem;
+  margin: 5px;
+}
+
+.slide_15--image span.slide--instructions {
+  padding: 5px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.slide_15--image span.slide--instructions:first-of-type {
+  margin-top: 15px;
+}
+.slide_15--image span.slide--instructions:last-of-type {
+  margin-bottom: 15px;
+}
+
+/* #endregion */
+
+/* #region Coach Bernadette Bio Gray Cards (Mobile & Tablet) */
+
+div.gray_card--coach_bernadettes_bio {
+  width: var(--gallery_width);
+  margin: 100px auto;
+  padding: 50px 0px;
+  background: var(--gray_card);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* #endregion */
+
+/* #region Responsive Utility Classes */
+
+.cb-responsive--show_mobile {
+  display: none;
+}
+
+/* #endregion */
+
+/* #region Media Queries */
+
+/* #region Media Queries -- Smartphones */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* Resize all circular image on all slides to the same width & height on mobile view */
+  .slide_4--image div.container,
+  .slide_12 .circle,
+  .slide_14--image img {
+    cursor: pointer;
+    width: 215px;
+    height: 215px;
+  }
+
+  div.dating__footer--2 span.dating__account {
+    font-size: 0.95rem;
+  }
+}
+
+/* #endregion */
+
+/* Custom positioning of Slide 7's rotating die to center-ish on tablet view. */
+.slide_7 .ui {
+  left: 95%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 685px) {
+  .slide_3--image img {
+    width: 90%;
+    height: 175px;
+  }
+
+  .slide_3--image span {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 922px) and (max-width: 1220px) {
+  .rocket {
+    left: 40%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  /* Changed max-width from 921px to 1024px on 4/18/21 to resolve issues on tablet horizontal view. */
+
+  /* Resize all circular image on all slides to the same width & height on mobile view */
+
+  .slide_4--image div.container {
+    width: 45%;
+    height: 45%;
+  }
+
+  .slide_7 .ui {
+    left: 75%;
+    left: 70%;
+  }
+
+  .slide_12 .circle,
+  .slide_14--image img {
+    cursor: pointer;
+    width: 215px;
+    height: 215px;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+  .slide_1--image .television {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  /* Max-widht was initially 921px but it was changed to 1024px to prevent the desktop CSS Grid carousel
+	  from appearing on tablets in horizontal mode. */
+  .cb-responsive--show_mobile {
+    display: initial;
+  }
+
+  .cb-responsive--hide_mobile {
+    display: none;
+  }
+
+  /*  Restyle slides on mobile screens by:
+	      &&&   Stacking slides' image & text containers by changing flex-direction from "row" to "column"
+	      &&&   Centering image & text containers within column-ized slide. */
+
+  .slide {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Restyle slide text & image  on mobile screens by:
+	    &&&   Stretching slide text & image containers across 100% of their flex container
+	    &&&   Centering content within text & image flex containers */
+
+  .slide--text,
+  .slide--image {
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Restyle slide text on mobile screens by:
+	    &&&   Applying "base" spacing between slide text (top) and slide image (bottom) */
+
+  .slide--text {
+    margin-bottom: 55px;
+  }
+
+  .slide--image {
+    flex-direction: row;
+  }
+
+  /* Top margin on Parenting Recipes div not needed when image are displayed side-by-side. */
+  .slide_3--image div.parenting_recipes {
+    margin-top: initial;
+  }
+
+  .slide_5--image {
+    /* Add height to card to "recoup" uniform bottom-margin spacer applied to all slide--text divs. */
+    height: 400px;
+    /* Add margin-bottom to card to further "recoup" space taken up by rocket. */
+    margin-bottom: 30px;
+  }
+
+  div.rocket {
+    top: 25%;
+    left: 58%;
+    width: 100%;
+    margin: -100px 0 0 -100px;
+  }
+
+  /* "Crop" selected smoke plumes of Sass Rocket on smaller screens. */
+
+  .slide_5--image i.s-16,
+  .slide_5--image i.s-17,
+  .slide_5--image i.s-18,
+  .slide_5--image i.s-19,
+  .slide_5--image i.s-20 {
+    display: none;
+  }
+
+  .slide_7--image {
+    height: 1px;
+  }
+
+  .slide_8--image {
+    margin-top: 25px;
+  }
+
+  .slide_9--image {
+    width: 90%;
+    height: 300px;
+  }
+
+  .slide_10--image,
+  .slide_11--image {
+    /* For some reason, none of the standard flex-box centering techniques 
+	      work on this div? */
+    margin: 0 auto;
+  }
+
+  .slide_13 span {
+    max-width: 40ch;
+  }
+
+  .slide_13--image {
+    margin-top: 175px;
+  }
+
+  .slide_15--image img {
+    width: 200px;
+  }
+
+  .slide_15--image span.slide--instructions {
+    font-size: 1.4rem;
+  }
+}
+/* #endregion */
+
+/* #endregion */

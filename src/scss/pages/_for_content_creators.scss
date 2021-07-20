@@ -1,0 +1,264 @@
+main#content_creators a {
+  background-image: none;
+}
+
+main#content_creators a.button::after {
+  position: absolute;
+  content: "Click To Expand Image";
+  bottom: -20px;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+div#content_creators_intro {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div#content_creators_intro p {
+  max-width: 35ch;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+div#content_creators_intro img {
+  max-width: 400px;
+  max-height: 350px;
+}
+
+div#content_creators_intro span {
+  font-weight: inherit;
+}
+
+p#p--bulleted_content_creators--top {
+  margin-bottom: -15px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+p#p--bulleted_content_creators--bottom {
+  margin-top: -15px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+div#for_content_creators--wed_love_to_help_you {
+  justify-content: center;
+  align-content: center;
+}
+
+div#content_creation_buckets {
+  justify-content: center;
+  text-align: center;
+  padding: 55px;
+}
+
+span.nav--local_hyperlink {
+  margin-top: 15px;
+  border: 1px solid var(--black);
+  border-radius: var(--border_radius);
+  padding: 10px;
+  background: var(--brand_color_1);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  transition: transform 0.25s ease-in-out;
+}
+
+span.nav--local_hyperlink:hover {
+  transform: scale(1.1);
+}
+
+span#nav--local_hyperlink--content_collab_call {
+  font-size: 15px;
+  background: var(--brand_color_2);
+}
+
+span.nav--local_hyperlink a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+span.nav--local_hyperlink a:link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+span.nav--local_hyperlink a:visited {
+  color: var(--brand_color_3);
+}
+
+span.nav--local_hyperlink#nav--local_hyperlink--content_collab_call a:visited {
+  color: var(--brand_color_1);
+}
+
+span.nav--local_hyperlink a:hover,
+span.nav--local_hyperlink a:focus {
+  color: var(--white);
+}
+
+span.nav--local_hyperlink a:active {
+  color: var(--white);
+  text-decoration: none;
+}
+
+div.container--card--content_list {
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+div.card--content_list {
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  margin-right: 3px;
+}
+
+div.card--content_list p:first-of-type {
+  text-align: center;
+  max-width: 20ch;
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  color: var(--black);
+}
+
+div.card--content_list p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+div.card--content_list ul {
+  list-style: none;
+  padding-top: 20px;
+  font-size: 18px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+div.card--content_list ul li {
+  display: flex;
+  padding-top: 10px;
+}
+
+div.card--content_list ul i {
+  align-self: center;
+  padding-right: 10px;
+  font-size: 15px;
+  color: var(--white);
+}
+
+div#container--book_discussion_flyers {
+  /* display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	gap: 20px;
+	width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img.book_discussion_flyer {
+  max-width: 50%;
+  max-height: 592px;
+  border: 1px solid var(--black);
+  box-shadow: 1px 1px 1px 1px var(--black);
+}
+
+a.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--brand_color_1);
+  text-decoration: none;
+  transition: transform ease-in-out 0.25s;
+}
+
+a.close:hover {
+  transform: scale(1.5);
+}
+
+a.close:after {
+  content: "X";
+  color: white;
+}
+
+div.book_discussion_gallery--larger {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.book_discussion--larger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1, 0);
+  transition: transform ease-in-out 250ms;
+  z-index: 999;
+}
+
+div.book_discussion--larger:target {
+  /* display: flex; */
+  transform: scale(1, 1);
+}
+
+div.book_discussion--larger--content {
+  position: relative;
+  max-width: 55vw;
+  padding: 15px;
+  background: var(--gray_card);
+  box-shadow: 2px 2px 2px var(--black);
+}
+
+div.book_discussion--larger img {
+  max-width: 100%;
+  width: 450px;
+  height: 450x;
+}
+
+/* #region Media Queries */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  div.book_discussion--larger--content {
+    position: relative;
+    max-width: 90vw;
+    padding: 15px;
+    background: var(--gray_card);
+    box-shadow: 2px 2px 2px var(--black);
+  }
+
+  div.book_discussion--larger img {
+    height: 80vh;
+  }
+}
+
+/* #endregion */

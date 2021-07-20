@@ -1,0 +1,299 @@
+main#coach_bernadettes_certifications {
+  overflow: hidden;
+}
+
+main#coach_bernadettes_certifications h1 {
+  line-height: 1.25;
+}
+
+/* #region All Cards */
+
+.gray_card--text_block#certifications_tree_gif_card,
+.gray_card--text_block#mixed_feelings_card,
+.gray_card--text_block#certifications_research_credentials_card
+  .gray_card--text_block#icf_card,
+.gray_card--text_block#coach_u_card,
+.gray_card--text_block#interview_intro_card,
+.gray_card--text_block.interview_card,
+.gray_card--text_block#reach_out_card {
+  max-width: 100%;
+  padding: 15px;
+  background: green;
+}
+
+/* #endregion */
+
+/* #region Coaching Has Grown Exponentially Over The Years */
+
+#certifications_tree_gif_card,
+#certifications_research_credentials_card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* #endregion */
+
+/* #region ICF & Coach U Coaching Certifications */
+
+.coaching_certifications_image_and_text img#icf_logo {
+  width: 380px;
+}
+
+.coaching_certifications_image_and_text img#coach_u_logo {
+  align-self: center;
+  width: auto;
+  height: 140px;
+}
+
+.coaching_certifications_image_and_text ul#mcc_requirements {
+  // position: relative;
+  // padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.coaching_certifications_image_and_text ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: initial;
+  max-width: 60ch;
+  margin: 30px 0px;
+  padding: 30px;
+  border: 1px dotted black;
+  border-radius: var(--border_radius);
+  background: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  list-style: square;
+}
+
+.coaching_certifications_image_and_text ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.coaching_certifications_image_and_text span.certification_label {
+  align-self: center;
+  display: inline-block;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: -45px;
+  padding: 5px 10px;
+  border-radius: var(--border_radius);
+  background: var(--brand_color_1);
+  color: white;
+  font-weight: 700;
+}
+.coaching_certifications_image_and_text
+  ul#mcc_requirements
+  span.certification_label {
+  width: 50%;
+}
+
+.coaching_certifications_image_and_text
+  ul#coachu_requirements
+  span.certification_label {
+  width: 75%;
+}
+
+#certifications_tree_gif_card img,
+#certifications_research_credentials_card img {
+  height: 300px;
+  width: auto;
+}
+
+.coaching_certifications_image_and_text img#icf_logo,
+.coaching_certifications_image_and_text img#coach_u_logo {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* #endregion */
+
+/* #region Coaching Interview Dropdowns */
+
+.coaching_interview details {
+  display: flex;
+  flex-direction: column;
+}
+
+.coaching_interview ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 60ch;
+  /* Having trouble getting flex box to center these Dropdown uls ...
+      Falling back on the old "margin *px auto" workhorse. */
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px dotted black;
+  border-radius: var(--border_radius);
+  background: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  list-style: square;
+}
+
+.coaching_interview ul,
+.coaching_interview ul ul {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.coaching_interview ul ul {
+  margin-top: initial;
+  margin-bottom: initial;
+  padding: 10px;
+  border: none;
+  border: none;
+  list-style: circle;
+}
+
+.coaching_interview li {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.coaching_interview ul ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+details.coaching_interview--questions_dropdown {
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--gray);
+  cursor: pointer;
+}
+
+details.coaching_interview--questions_dropdown[open] ul {
+  opacity: 100;
+}
+
+details.coaching_interview--questions_dropdown summary {
+  text-align: center;
+  border-radius: var(--border_radius);
+  padding: 20px;
+  background-color: var(--brand_color_1);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+
+// details.coaching_interview--questions_dropdown,
+// button#schedule_discovery_session {
+//   width: 55ch !important;
+// }
+
+button#schedule_discovery_session {
+  width: 50% !important;
+  /* Explicitly set height to 68px to ensure button appears identical
+      to .coaching_interview--questions_dropdown <details> elements. */
+  height: 68px;
+  border: none;
+  border-radius: var(--border_radius);
+  background-color: var(--brand_color_1);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+button#schedule_discovery_session:hover {
+  background-color: var(--brand_color_2);
+  height: 175px;
+}
+
+button#schedule_discovery_session:hover span#schedule_discovery_session_text {
+  font-size: 35px;
+}
+
+button#schedule_discovery_session span#schedule_discovery_session_text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  transition: all 0.25s ease-in-out;
+}
+
+/* #endregion */
+
+/* #region Citations & Further Reading */
+
+#citations_container {
+  justify-content: space-evenly;
+}
+
+.citations {
+  border: 1px dotted var(--black);
+  border-radius: var(--border_radius);
+  background: var(--white);
+  width: 40%;
+}
+
+.citations h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.75rem;
+}
+
+.citations p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.85rem;
+  color: var(--black);
+}
+
+/* #endregion */
+
+/* #region Media Queries */
+
+@media screen and (min-width: 0px) and (max-width: 542px) {
+  .coaching_certifications_image_and_text
+    ul#mcc_requirements
+    span.certification_label,
+  .coaching_certifications_image_and_text
+    ul#coachu_requirements
+    span.certification_label {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 560px) {
+  .coaching_certifications_image_and_text img#icf_logo {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 921px) {
+  button#schedule_discovery_session,
+  details.coaching_interview--questions_dropdown {
+    width: 100% !important;
+    margin-top: 50px;
+  }
+  #citations_container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .citations {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 990px) {
+  .responsive--hide_mobile {
+    display: none;
+  }
+
+  .responsive--show_mobile {
+    display: initial;
+  }
+}
+
+/* #endregion */

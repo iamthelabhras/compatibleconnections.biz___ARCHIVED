@@ -1,0 +1,86 @@
+/* Text-related utility classes. */
+
+.strong {
+  font-weight: 700;
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.center {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.shorten-ch {
+  max-width: 10ch;
+}
+
+.bolder {
+  font-weight: 700;
+}
+
+.hacky_inline_block_fix {
+  display: inline-block;
+  width: 85%;
+}
+
+/* Turns out this is as simple as setting display to ...inline-block. */
+.clean_break_on_wrap {
+  display: inline-block;
+}
+
+/* Add span-specific styling rules so that when certain utility classes
+    are implemented as spans within other text elements they "blend"
+    seamlessly with their parent elements & do not revert to the 
+    "vanilla" span element's base styling. */
+
+span.emphasis {
+  margin: 0;
+  padding: 0;
+}
+
+span.strong,
+span.emphasis,
+span.clean_break_on_wrap {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* Visual (mostly image-related) utility classes. */
+
+.lighten {
+  filter: brightness(125%);
+}
+
+.darken {
+  filter: brightness(75%);
+}
+
+/* #region Responsive Utility Classes */
+
+/* NOTE: It appears I got my wires slightly crossed when implementing
+    these classes in:
+       the Meetcute / Back Issues page
+       The Meetcute Individual issue template
+       
+    The display values on that pages associated with these same selectors
+    are inverted.
+
+    See:
+        pages -- _meet_cute.scss 
+        layout -- _meet_cute_individual_issue_layout.scss */
+
+.responsive--hide_mobile {
+  display: initial;
+}
+
+.responsive--show_mobile {
+  display: none;
+}
+
+/* #endregion */

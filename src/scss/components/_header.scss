@@ -1,0 +1,59 @@
+header {
+  position: relative;
+  width: 100vw;
+}
+
+header div.site_identity {
+  margin-top: 10px;
+}
+
+span.site_identity--biz_name,
+span.site_identity--biz_tagline {
+  display: block;
+  font-family: "Pacifico", cursive;
+}
+
+span.site_identity--biz_name {
+  display: block;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 60px;
+  margin-left: 25px;
+}
+
+span.site_identity--biz_tagline {
+  margin-left: 130px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--brand_color_1);
+}
+
+header div.header_social_icons {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  font-size: 50px;
+  color: var(--black);
+  line-height: 40px;
+}
+
+header div.header_social_icons i {
+  transition: font-size ease-in-out 0.5s, color ease-in-out 0.5s;
+}
+
+header div.header_social_icons i:first-of-type {
+  padding-right: 10px;
+}
+
+div.header_social_icons i:hover,
+div.header_social_icons i:focus {
+  font-size: 55px;
+  color: var(--white);
+}
+
+@media screen and (min-width: 0px) and (max-width: 690px) {
+  header {
+    display: none;
+  }
+}

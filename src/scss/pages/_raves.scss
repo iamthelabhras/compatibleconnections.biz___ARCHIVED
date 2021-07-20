@@ -1,0 +1,266 @@
+main#raves h1 {
+  text-align: center;
+}
+
+/* #region  RAVES INTRO TEXT & IMAGE BLOCK */
+
+.gray_card--raves {
+  width: 85%;
+  margin: 100px auto;
+  padding: 50px 0px;
+  background: var(--gray_card);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gray_card--raves--image_and_text_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+div#raves_top--image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+#raves_top--image img {
+  align-self: center;
+  width: auto;
+  max-width: 350px;
+  min-height: 175px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px var(--black);
+}
+
+#raves_top--text {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+#raves_top--text p {
+  align-self: center;
+  max-width: 52ch;
+  // margin: 25px 0;
+  font-size: 18px;
+}
+
+#raves_top--text p:first-of-type {
+  max-width: 43ch;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#raves_top--text p:last-of-type {
+  margin-bottom: 25px;
+}
+
+/* #endregion RAVES INTRO TEXT & IMAGE BLOCK */
+
+/* #region RAVE MEDALLIONS */
+
+#raves_top--text .rave--medallion {
+  top: initial;
+  /* Dimensions of top text gray card require slightly different
+      width by applied to its .rave--medallion so that it matches 
+      the width of the rave medallions on the rest of the page. */
+  width: 70%;
+  margin: 0 auto;
+}
+
+.rave--medallion {
+  z-index: 2;
+  position: relative;
+  top: -3em;
+  text-align: center;
+  align-self: center;
+  width: 75%;
+  border: 1px solid var(--black);
+  border-radius: 50px;
+  padding: 10px;
+  background: var(--brand_color_1);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  cursor: hand;
+  overflow: hidden !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.rave--medallion::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: var(--brand_color_2);
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -1;
+  -moz-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+
+.rave--medallion::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: var(--brand_color_1);
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -2;
+  -webkit-transition: all 0.94s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  -moz-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  -o-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+.rave--medallion:hover::before {
+  opacity: 1;
+  width: 116%;
+}
+.rave--medallion:hover::after {
+  opacity: 1;
+  width: 120%;
+}
+
+/* #endregion RAVE MEDALLIONS */
+
+/* #region RAVE MEDALLION -- LINKS */
+
+/* Override default link styling for Rave medallion. */
+
+main#raves a.raves--sig_series_links {
+  display: inline-block;
+  color: var(--white);
+  background-image: none;
+}
+
+main#raves a.raves--sig_series_links:hover {
+  text-decoration: none;
+  background-image: none;
+}
+
+main#raves a.raves--sig_series_links span.clean_break_on_wrap {
+  color: var(--white);
+}
+
+/* #endregion RAVE MEDALLION -- LINKS */
+
+/* #region RAVE CARDS */
+
+#raves_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding: 25px;
+}
+
+.rave {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding: 25px;
+  max-width: 55ch;
+  min-width: 40ch;
+  border-radius: var(--border_radius);
+  box-shadow: 2px 2px 4px 1px var(--black);
+  background: whitesmoke;
+  transition: transform 500ms ease-in-out;
+}
+
+.rave:hover {
+  transform: scale(1.05);
+}
+
+.rave p {
+  font-size: 15px;
+}
+
+.rave p:first-of-type {
+  align-self: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.rave span {
+  margin: 0;
+}
+
+.rave--text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rave--raver {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding: 10px;
+}
+
+.rave--raver_name span {
+  margin-bottom: 0.25rem;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Pacifico", cursive;
+}
+
+.rave--raver_details span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* #endregion RAVE CARDS*/
+
+/* #region SUPPORT QUERIES */
+
+@supports (gap: 3rem) {
+  #raves_container {
+    gap: 3rem;
+  }
+
+  div.rave {
+    margin: initial;
+  }
+}
+
+/* #endregion  SUPPORT QUERIES */
+
+/* #region MEDIA QUERIES */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  .rave {
+    min-width: 35ch;
+  }
+}
+
+/* #endregion MEDIA QUERIES */

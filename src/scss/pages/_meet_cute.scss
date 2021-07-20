@@ -1,0 +1,450 @@
+#container--mc_explainer_text a,
+/* Unsure why but utilizing an .in_this_issue a selector does *not*
+    remove default animated underlining behavior for "Start Reading Issue #
+    links? */
+.in_this_issue a:hover {
+  background-image: none;
+}
+
+#container--mc_explainer_image_and_text {
+  justify-content: space-around;
+  align-content: center;
+}
+
+#container--mc_explainer_image_and_text p {
+  max-width: 45ch;
+  font-size: 18px;
+}
+
+img#woman_reading_paper {
+  max-width: 600px;
+  min-width: 400px;
+  max-height: 600px;
+  min-height: 400px;
+}
+
+#container--mc_explainer_text {
+  justify-content: center;
+  align-items: center;
+}
+
+#container--mc_explainer_text p:first-of-type {
+  text-align: center;
+  max-width: 30ch;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#container--mc_explainer_text button {
+  cursor: pointer;
+  align-self: center;
+  max-width: 25ch;
+  margin: 50px 0px;
+  border-radius: var(--border_radius);
+  padding: 15px;
+  font-family: var(--font_family_1);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: var(--brand_color_1);
+}
+
+/* #region Subscribe 1 (Top) */
+
+#subscribe_1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* #endregion */
+
+/* #region Meet-Cute Current & Back Issues (Flex Duplicate) */
+
+.cbi_flex_dup {
+}
+
+.cbi_flex_dup button {
+  align-self: center;
+  margin-top: 25px;
+  padding: 15px;
+  font-family: var(--font_family_1);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  max-width: 25ch;
+  border-radius: var(--border_radius);
+  background: var(--brand_color_1);
+}
+
+.cbi_flex_dup details[open] div.details-container {
+  opacity: 100;
+  border-left: 1px dashed #bbbbbb;
+  border-right: 1px dashed #bbbbbb;
+  border-bottom: 1px dashed #bbbbbb;
+  background: var(--white);
+}
+
+.cbi_flex_dup div.details-container {
+  opacity: 0;
+  padding: 20px;
+  transition: opacity ease-in 1s;
+}
+
+.cbi_flex_dup div.issues-container {
+}
+
+.issues-container div.flex_container--basic_row:nth-child(odd) {
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: -6px;
+}
+
+.issues-container div.flex_container--basic_row:nth-child(even) {
+  justify-content: space-around;
+  width: 100%;
+}
+
+#connect-the-hearts {
+  background: var(--gray_card);
+}
+
+.connect_the_hearts {
+  height: 105px;
+  width: 50.25%;
+  border-right: 4px solid var(--brand_color_1);
+}
+
+i.current_and_back_issue_timeline {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 65px;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 40px;
+  color: white;
+  background: var(--brand_color_1);
+}
+
+img.mc-masthead {
+  margin-left: 5%;
+  width: 90% !important;
+  margin-bottom: 15px;
+}
+
+.issue_quote_block {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: var(--border_radius);
+  padding: 20px;
+  font-weight: 700;
+  background: var(--brand_color_3);
+}
+
+.in_this_issue {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+
+span.in_this_issue_block {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--brand_color_1);
+  text-shadow: 1px 2px 1px var(--brand_color_3), 1px 1px 1px var(--black);
+}
+
+.in_this_issue ul {
+  display: block;
+}
+
+.in_this_issue li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  background: var(--white);
+}
+
+.in_this_issue a {
+  align-self: center;
+}
+
+.in_this_issue button {
+  cursor: pointer;
+}
+
+.issues-spacer {
+  width: 35%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.cbi_flex_dup details {
+  width: 35%;
+}
+
+.cbi_flex_dup summary {
+  min-width: 100%;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: rgb(43, 43, 43);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: left;
+  transition: margin-bottom 0.5s ease-in-out;
+  box-shadow: var(--shadow-size);
+  text-align: center;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Each Issue Includes */
+
+.container--each_new_issue_news_two_columns {
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.container--each-new-issue-includes_column {
+  /* Nothing here. */
+  opacity: 1;
+  padding: 0px 25px;
+}
+
+.container--issue_includes_icon_and_text {
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+.container--issue_includes_icon_and_text i {
+  width: 175px;
+  font-size: 100px;
+  color: var(--brand_color_1);
+  text-shadow: 1px 1px 1px var(--brand_color_2);
+}
+
+.meet-cute--each_issue_desc {
+  max-width: 50ch;
+  padding: 55px;
+  border-radius: var(--border_radius);
+  background-color: rgba(255, 255, 154, 0.4);
+}
+
+.container--issue_includes_icon_and_text span:nth-of-type(1) {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.container--issue_includes_icon_and_text span:nth-of-type(2) {
+  font-size: 15px;
+}
+
+/* #endregion */
+
+/* #region Meet-Cute Mailchimp Subscription Form */
+
+/*    This code replaces the <style> tag previously found in mc.html's <head>. 
+	    It also overrides some of Mailchimp's selected default CSS styling in the linked, third party style sheet.
+      */
+
+#mc_embed_signup {
+  width: 40%;
+  margin: 50px 0px;
+  margin-bottom: 25px;
+  font-family: var(--font_family_1);
+  font-size: 15px;
+  font-weight: 700;
+  background: var(--gray_card);
+  border: 1px dashed var(--black);
+  border-radius: var(--border_radius);
+}
+
+#mc_embed_signup form {
+  /* Fixes default (? - not sure, look into this) form behavior that
+      a) border a solid black border around the form & b) prevented form
+      from widening to fill 100% of its parent container. */
+  border: none;
+  width: 100%;
+}
+
+#mc_embed_signup i {
+  /* Stars next to the Subscribe! required fields. */
+  font-size: 12px;
+  color: var(--brand_color_1);
+}
+
+#mc_embed_signup div.flex_container--basic_row {
+  justify-content: center;
+  align-self: center;
+  padding: 5px;
+  border-bottom: 10px double var(--brand_color_1);
+}
+
+#mc_embed_signup_scroll h2 {
+  text-align: center;
+  /* !important overrides Mailchimp classic-10_7.css:3 styling. */
+  font-size: 50px !important;
+}
+
+#mc_embed_signup_scroll p.new_subscribers_receive {
+  width: 40ch;
+  font-size: 20px;
+  color: var(--brand_color_1);
+  text-align: center;
+}
+
+div.mc-field-group {
+  display: flex;
+}
+
+div.mc-field-group label {
+  display: flex;
+  width: 50%;
+}
+
+div.mc-field-group input {
+  width: 85% !important;
+}
+
+.mc-field-group {
+  margin-top: 0;
+}
+
+div.clear {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input.button {
+  align-self: center;
+  max-width: 25ch !important;
+  border-radius: var(--border_radius) !important;
+  font-family: var(--font_family_1) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: white;
+  background: var(--brand_color_1) !important;
+}
+
+/* #endregion */
+
+/* #region All New Subscribers Receive */
+
+div.all_new_subscribers_receive {
+  justify-content: space-around;
+  width: 100vw;
+}
+
+#all_new_subscribers_receive-text_and_image_blocks {
+  width: 40%;
+  margin: 50px 0px;
+}
+
+#all_new_subscribers_receive-text_and_image_blocks img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 25px;
+}
+
+div.all_new_subscribers_receive_image_and_text {
+  align-items: center;
+  margin: 25px 0px;
+}
+
+div.all_new_subscribers_receive_text {
+  align-items: center;
+  max-width: 55ch;
+}
+
+div.all_new_subscribers_receive_text p:first-of-type {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* #endregion */
+
+/* #region Media Queries */
+
+/* Media Queries - Tablets */
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  /* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 */
+}
+
+/* Media Queries - Smartphones */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* Looks like I got the implemention for these mixed up on this page?
+      This display values here are the OPPOSITE of what I found in the utility classes SCSS? */
+  #meetcute .responsive--show_mobile {
+    display: initial;
+  }
+
+  #meetcute .responsive--hide_mobile {
+    display: none;
+  }
+
+  .issues-container details {
+    flex-grow: 1;
+    margin: 25px 0px;
+  }
+
+  .container--issue_includes_icon_and_text {
+    margin: 0px 0px;
+  }
+
+  .container--issue_includes_icon_and_text i {
+    width: auto;
+    margin-bottom: -75px;
+    padding: 50px;
+  }
+
+  #all_new_subscribers_receive-text_and_image_blocks {
+    width: 80%;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 860px) {
+  /* Looks like I got the implemention for these mixed up on this page?
+      This display values here are the OPPOSITE of what I found in the utility classes SCSS? */
+  #meetcute .responsive--show_mobile {
+    display: initial;
+  }
+
+  #meetcute .responsive--hide_mobile {
+    display: none;
+  }
+
+  .issues-container details {
+    flex-grow: 1;
+    margin: 25px 0px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 880px) {
+  #mc_embed_signup {
+    width: 90%;
+  }
+}
+
+/* #endregion */

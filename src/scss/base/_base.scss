@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-weight: 500;
+  color: var(--black);
+  scroll-behavior: smooth;
+  /* Add scroll-padding magic to fix Nav bar overlap issues on local hyperlinks. */
+  scroll-padding-top: 6.75rem;
+}
+
+body {
+  background-image: url(../images/cc_website_background.png);
+  font-family: var(--font_family_1);
+  line-height: 1.2;
+}
+
+main {
+  width: 100vw;
+  margin-top: 15px;
+  padding-bottom: 25px;
+  background: var(--white);
+  border-top: double 8px var(--brand_color_1);
+  border-bottom: double 8px var(--brand_color_1);
+  overflow: hidden;
+}
+
+/* #region Base Styling for Hyperlinks */
+
+/* Remember that when setting styles for link states, 
+          a:hover must be declared after a:link & a:visited and 
+          a:active must be declared after a:hover. */
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  color: var(--brand_color_1);
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--brand_color_1);
+}
+
+a:visited {
+  color: var(--brand_color_2);
+}
+a:active {
+  color: var(--black);
+}
+
+/* Underlining things in CSS can be surprisingly difficult!!  
+*
+*    To ensure the underline-on-hover effect I applied to all links 
+*    in the main element wrapped across lines, I tweaked Nicky Meuleman's
+*    code in this wonderful article:
+*
+*    https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline */
+
+main a {
+  position: relative;
+  text-decoration: none;
+  background-image: linear-gradient(
+      rgba(221, 19, 223, 0),
+      rgba(221, 19, 223, 0)
+    ),
+    linear-gradient(rgba(221, 19, 123, 0), rgba(221, 19, 123, 0));
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  transition: background-size 0.4s linear, background-image 0.4s linear;
+}
+
+main a:hover {
+  background-image: linear-gradient(
+      rgba(221, 19, 223, 0),
+      rgba(221, 19, 223, 0)
+    ),
+    linear-gradient(rgba(221, 19, 123, 1), rgba(221, 19, 123, 1));
+  background-size: 0 2px, 100% 2px;
+}
+
+/* #endregion */

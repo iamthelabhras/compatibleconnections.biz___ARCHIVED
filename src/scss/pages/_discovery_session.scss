@@ -1,0 +1,242 @@
+div#what_is_a_discovery_session-1 {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div#what_is_a_discovery_session-1 p {
+  text-align: center;
+  max-width: 35ch;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+div#what_is_a_discovery_session-1 img {
+  max-width: 400px;
+  max-height: 350px;
+}
+
+div#what_is_a_discovery_session--2_and_3_container {
+  gap: 25px;
+  justify-content: space-around;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 0px 20px;
+}
+
+div#what_is_a_discovery_session-2,
+div#what_is_a_discovery_session-3 {
+  max-width: 35%;
+  min-width: 330px;
+}
+
+div#what_is_a_discovery_session-2 p:first-of-type,
+div#what_is_a_discovery_session-3 p:first-of-type {
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+div#what_is_a_discovery_session-2 p,
+div#what_is_a_discovery_session-3 p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+div#what_is_a_discovery_session-2 {
+  transform: rotate(-3.25deg);
+}
+
+div#what_is_a_discovery_session-3 {
+  transform: rotate(3.25deg);
+}
+
+div#what_is_a_discovery_session-3 ul {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+div#what_is_a_discovery_session-3 ul li {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+div#what_is_a_discovery_session-3 ul li span {
+  max-width: 30ch;
+}
+
+div#what_is_a_discovery_session-3 ul li i {
+  align-self: center;
+  padding-right: 15px;
+  font-size: 15px;
+  color: var(--white);
+}
+
+/* div#what_is_a_discovery_session-3 ul span {
+	      display: inline-block;
+	    } */
+
+div#schedule_discovery_session--container {
+  position: relative;
+}
+
+div#schedule_discovery_session--container p {
+  max-width: 30ch;
+}
+
+div#schedule_discovery_session--container p:nth-of-type(2) {
+  text-align: center;
+  max-width: 55ch;
+}
+
+img#discovery_session_bernadette {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+button#schedule_discovery_session {
+  height: 50px;
+  width: 50%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: var(--border_radius);
+  background: var(--brand_color_1);
+}
+
+button#schedule_discovery_session span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+div#discovery_session--personal_info--container {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div#discovery_session--personal_info_1--container {
+  width: 55%;
+}
+
+div#discovery_session--personal_info_2--container {
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 450px;
+  max-height: 250px;
+  margin-right: 25px;
+  border-radius: var(--border_radius);
+  background: var(--brand_color_1);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+div.personal_info_2--personal_info--icons_and_text {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+div.personal_info_2--personal_info--icons_and_text span {
+  display: inline-block;
+  width: 25ch;
+  font-weight: inherit;
+  color: var(--white);
+}
+
+div.personal_info_2--personal_info--icons_and_text {
+  margin-top: 20px;
+}
+
+div.personal_info_2--personal_info--icons_and_text:last-of-type {
+  margin-bottom: 20px;
+}
+
+div.personal_info_2--personal_info--icons_and_text i {
+  display: inline-block;
+  color: var(--white);
+}
+
+/* #region Media Queries */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  div#what_is_a_discovery_session-1 img {
+    width: 100%;
+  }
+
+  div#what_is_a_discovery_session-1 p {
+    font-size: 20px;
+  }
+
+  div#what_is_a_discovery_session--2_and_3_container {
+    width: initial;
+    min-width: 100%;
+    padding: 0 5px;
+  }
+
+  div#what_is_a_discovery_session-2,
+  div#what_is_a_discovery_session-3 {
+    max-width: initial;
+    min-width: 100%;
+  }
+
+  div#what_is_a_discovery_session-2 p:first-of-type,
+  div#what_is_a_discovery_session-3 p:first-of-type {
+    max-width: initial;
+    font-size: 20px;
+  }
+
+  div#what_is_a_discovery_session-2,
+  div#what_is_a_discovery_session-3 {
+    transform: initial;
+  }
+
+  div#schedule_discovery_session--container p:nth-of-type(2) {
+    max-width: 25ch;
+  }
+
+  div#discovery_session--personal_info_1--container {
+    width: 100%;
+  }
+
+  div#discovery_session--personal_info_2--container {
+    min-width: initial;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 715px) {
+  button#schedule_discovery_session {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  div#discovery_session--personal_info_1--container {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 853px) and (max-width: 940px) {
+    div#what_is_a_discovery_session-2,
+    div#what_is_a_discovery_session-3 {
+      transform: initial;
+    }
+  }
+}
+
+/* #endregion */

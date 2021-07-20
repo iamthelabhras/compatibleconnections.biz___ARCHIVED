@@ -1,11 +1,17 @@
 {
-  "name": "cc-6-2021_reboot",
+  "name": "cc_w_sass",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An implemention of Compatible Connections' 2.0 website utilizing professional-grade (e.g. Sass) web development tools.",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "sasswatch": "sass --watch src/scss:dist/css/"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Labhrás Mac Gabhann",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.35.1"
+  }
 }

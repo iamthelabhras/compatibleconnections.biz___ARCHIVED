@@ -1,0 +1,22 @@
+div#events_on_hold {
+  justify-content: space-around;
+  align-items: center;
+}
+
+div#events_on_hold p {
+  max-width: 50ch;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+div#events_on_hold p:first-of-type {
+  max-width: 40ch;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 0px) and (max-width: 921px) {
+  main#events div.flex_container--basic_column:first-of-type p:first-of-type {
+    text-align: center;
+  }
+}

@@ -1,0 +1,85 @@
+/* #region CSS Custom Variables */
+
+:root {
+  /* borders & border radii */
+  --border_radius: 15px;
+  --card--border_radius: 5px;
+  /* colors */
+  --brand_color_1: #dd137b;
+  --brand_color_2: #ff7bac;
+  --brand_color_3: #fc91c2;
+  --black: #272727;
+  --gray_card: #f2f2f2;
+  --gray_hero--background: #f5f5f5;
+  --pink: #ff7bac;
+  --pink_dark: #dd137b;
+  --shadow-size: 3px;
+  --transparent: rgba(255, 255, 255, 0);
+  --white: #f5fffa;
+  /* spacing */
+  --h1_page_title--top_margin: 50px;
+  --h1_page_title--bottom_margin: 50px;
+  --gray_hero--top_and_bottom_margin: 50px;
+  --gray_hero--top_and_bottom_padding: 50px;
+  --gray_hero--left_and_right_padding: 25px;
+
+  /* typography */
+  --font_family_1: "Open Sans", sans-serif;
+  --font_family_2: "Pacifico", cursive;
+  --font_size_1: 1.5vw;
+  --font_size_hover: 1.75vw;
+  --font_size_2: 2.25vw;
+  --font_size_3: 3.375vw;
+  --font_size_4: 5.063vw;
+  --font_size_5: 7.594vw;
+  --font_size_5: 7vw;
+  --typography_defaults-margin: 10px;
+  --text_shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+
+  /* colors */
+  --yellow: #ffff00;
+}
+/* #endregion */
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* #region MEDIA QUERIES: ALL */
+
+/* #region MEDIA QUERIES: Smartphones */
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  /* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 */
+  :root {
+    --font_size_1: calc(1.5vw * 2.5);
+    --font_size_hover: calc(1.75vw * 2.5);
+    --font_size_2: calc(2.25vw * 2.5);
+    --font_size_3: calc(3.375vw * 1.5);
+    --font_size_4: calc(5.063vw * 1.5);
+    --font_size_5: calc(7.594vw * 1.5);
+    --space_between_h1_and_title_card: 7vh;
+    --space_between_cards: 5vh;
+    --space_between_pitch_cards: 5vh;
+  }
+}
+/* #endregion */
+
+/* #region MEDIA QUERIES: Tablets */
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  /* ----- 🌎🌎🌎 GLOBAL 🌎🌎🌎 */
+  :root {
+    --font_size_1: calc(1.5vw * 1.5);
+    --font_size_hover: calc(1.75vw * 1.5);
+    --font_size_2: calc(2.25vw * 1.5);
+    --font_size_3: calc(3.375vw * 1.5);
+    --font_size_4: calc(5.063vw * 1.5);
+    --font_size_5: calc(7.594vw * 0.85);
+    --space_between_h1_and_title_card: 5vh;
+    --space_between_cards: 5vh;
+    --space_between_pitch_cards: 5vh;
+  }
+}
+/* #endregion */
+
+/* #endregion MEDIA QUERIES: ALL */

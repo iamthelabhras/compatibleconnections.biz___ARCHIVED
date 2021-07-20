@@ -1,0 +1,54 @@
+h2.message_from_coach_beradette--issue_4 {
+  align-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px !important;
+  color: var(--brand_color_1);
+}
+
+.issue_4--message_from_coach_bernadette--summer_activities_container {
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Set an explicit width on all h2's to ensure they fle wrap at the same breakpoint! */
+.issue_4--message_from_coach_bernadette--summer_activities_container h2 {
+  text-align: center;
+  display: inline-block;
+  width: 40%;
+}
+
+.issue_4--message_from_coach_bernadette--summer_activities_container
+  img.summer_activities_image {
+  width: 50%;
+  height: auto;
+  height: 70%;
+  margin-right: 10px;
+  border-radius: var(--border_radius);
+  opacity: 0.8;
+}
+
+.issue_4--message_from_coach_bernadette--summer_activities_container + p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px !important;
+}
+
+section#dating_deep_dive p.strong {
+  font-size: 25px;
+}
+
+section#dating_deep_dive p.strong#dating_deep_dive_top {
+  margin-top: 25px;
+}
+
+section#dating_deep_dive p.strong#dating_deep_dive_bottom {
+  margin-bottom: 25px;
+}
+
+section#dating_deep_dive p.footnote {
+  font-weight: 700;
+  font-size: 15px;
+  font-style: italic;
+}

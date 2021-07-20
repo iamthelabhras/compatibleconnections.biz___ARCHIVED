@@ -1,0 +1,147 @@
+/* #region Self-Hosted Fonts - "Open Sans" (Open Sans / Main Font) */
+
+/*  See https://fonts.google.com/specimen/Open+Sans */
+
+/* Used if no font-weight is specified? */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../src/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Used if no font-weight is specified & text is italicized? */
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 200;
+  src: url("../../src/fonts/OpenSans-Light.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 200;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-LightItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  src: url("../../src/fonts/OpenSans-Light.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-LightItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  src: url("../../src/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 500;
+  src: url("../../src/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  src: url("../../src/fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-SemiBoldItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  src: url("../../src/fonts/OpenSans-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-BoldItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 800;
+  src: url("../../src/fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-style: italic;
+  src: url("../../src/fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* #endregion Self-Hosted Fonts - "Open Sans" (Open Sans / Main Font) */
+
+/* #region Self-Hosted Fonts - "Pacifico" (Pacifico / Cursive Font) */
+
+/*  See https://fonts.google.com/specimen/Pacifico */
+/*	Note: Pacifico only has one weight: 400! */
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../../src/fonts/Pacifico-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  font-style: italic;
+  src: url("../../src/fonts/Pacifico-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* #endregion Self-Hosted Fonts - "Pacifico" (Pacifico / Cursie Font) */

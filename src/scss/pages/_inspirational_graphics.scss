@@ -1,0 +1,148 @@
+#inspirational_graphics_gallery a {
+  /* Stop site-wide line underlining from appearing when Inspirational 
+      Graphics in gallery are hovered. */
+  background-image: none;
+}
+
+.inspirational_graphics_gallery--thumbnails {
+  display: grid;
+  gap: 3vw;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(180px, 1fr));
+  width: 95%;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.inspirational_graphic--thumbnail {
+  font-family: initial;
+  padding: 5px 10px;
+}
+
+.inspirational_graphic--thumbnail img {
+  width: 100%;
+  box-shadow: 5px 5px 5px var(--black);
+  transition: transform 0.5s ease-in-out;
+}
+
+.inspirational_graphic--thumbnail:nth-child(odd) img {
+  transform: rotate(-5deg);
+}
+
+.inspirational_graphic--thumbnail:nth-child(even) img {
+  transform: rotate(5deg);
+}
+
+.inspirational_graphic--thumbnail img:hover {
+  transform: scale(1.25);
+}
+
+a.button {
+}
+
+a.close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--brand_color_1);
+  text-decoration: none;
+  transition: transform ease-in-out 0.25s;
+}
+
+a.close:hover {
+  transform: scale(1.5);
+}
+
+a.close:after {
+  content: "X";
+  color: white;
+}
+
+.inspirational_graphics_gallery--larger {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.inspirational_graphic--larger {
+  /* This is the "darkened backdrop" against which Inspirational Graphics
+      appear when gallery thumbails are clicked. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1, 0);
+  transition: transform ease-in-out 250ms;
+  z-index: 999;
+}
+
+.inspirational_graphic--larger:target {
+  display: flex;
+  /* This value dictates the size of the enlarged Inspirational Graphic,
+      frame, and X-out / close toggle. */
+  transform: scale(1, 1);
+}
+
+.inspirational_graphic--larger--content {
+  position: relative;
+  max-width: 55vw;
+  padding: 15px;
+  background: var(--gray_card);
+  box-shadow: 2px 2px 2px var(--black);
+}
+
+.inspirational_graphic--larger img {
+  max-width: 100%;
+  // min-width: 100%;
+}
+
+#container--inspirational_graphics--suggestions {
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#container--inspirational_graphics--suggestions img {
+  margin-bottom: 25px;
+  background: var(--brand_color_2);
+}
+
+#container--inspirational_graphics--suggestions .gray_card--text_block {
+  margin: 0px;
+}
+
+#container--form--inspirational_graphics_suggestions {
+  justify-content: center;
+  width: 100vw;
+  margin: 100px 0px;
+}
+
+iframe#form--inspirational_graphics_suggestions {
+  width: 450px;
+  height: 696px;
+}
+
+/* #endregion INSPIRATIONAL GRAPHICS GALLERY */
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  .inspirational_graphic--thumbnail:nth-child(odd) img,
+  .inspirational_graphic--thumbnail:nth-child(even) img {
+    transform: rotate(0deg);
+  }
+
+  .inspirational_graphic--larger:target {
+    /* Enlarge targeted/clicked Inspirational Graphics on smaller screens. */
+    transform: scale(1.5, 1.5);
+  }
+}

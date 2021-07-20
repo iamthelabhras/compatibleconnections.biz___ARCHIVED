@@ -1,0 +1,141 @@
+footer {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px !important;
+  background: var(--brand_color_1);
+}
+
+footer img {
+  margin-top: -50px;
+  width: 175px;
+  height: 150px;
+  border-radius: 50%;
+  filter: brightness(1.25);
+}
+
+div#footer_site_details--text {
+  flex-grow: 1;
+  margin-left: 200px;
+}
+
+div#footer_site_details--text p {
+  margin-top: 0px;
+  /* margin-left: 25px; */
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 200;
+  font-style: italic;
+}
+div#footer_site_details--text p:first-of-type {
+  font-size: 15px;
+  color: var(--white);
+  font-weight: 700;
+  font-style: normal;
+}
+
+div #footer_site_details--text p:nth-of-type(2) {
+  margin-top: 10px;
+}
+
+a#developer_link {
+  /* Underlining things in CSS can be surprisingly difficult!!  
+*
+*    To ensure the underline-on-hover effect I applied to all links 
+*    in the main element wrapped across lines, I tweaked Nicky Meuleman's
+*    code in this wonderful article:
+*
+*    https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline 
+*
+*     NOTE: This is a nearly identical, but seperate, set of CSS styles based
+*     on main a styling in _base.scss. */
+  text-decoration: none;
+  background-image: linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0)),
+    linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0));
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  transition: background-size 0.4s linear, background-image 0.4s ease-in-out;
+  color: var(--yellow);
+  font-weight: 200;
+}
+
+a#developer_link:hover {
+  background-image: linear-gradient(
+      rgba(255, 255, 0, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(rgba(255, 255, 0, 1), rgba(255, 255, 0, 1));
+  background-size: 0 2px, 100% 2px;
+}
+
+/* Tweak Footer Social Icons So They Don't Disappear on brand_color_1 Background */
+
+footer div#footer-social_icons a:active,
+footer div#footer-social_icons a:link {
+  color: var(--black);
+  font-weight: 700;
+}
+
+footer div#footer-social_icons a:hover {
+  color: var(--white);
+}
+
+footer div#footer-social_icons a:visited {
+  color: var(--brand_color_2);
+}
+footer div#footer-social_icons a:active {
+  color: var(--black);
+}
+
+footer div#footer-social_icons {
+  margin-left: 20px;
+  font-size: 50px;
+  color: black;
+}
+
+footer div#footer-social_icons i {
+  transition: font-size ease-in-out 0.5s, color ease-in-out 0.5s;
+  margin-bottom: 15px;
+}
+
+footer div#footer-social_icons i:first-of-type {
+  padding-right: 20px;
+}
+
+div#footer-social_icons i:hover,
+div#footer-social_icons i:focus {
+  font-size: 55px;
+  color: var(--white);
+  transform: scale(1.25);
+}
+
+@media screen and (min-width: 0px) and (max-width: 623px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  div#footer-social_icons {
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  div#footer_site_details--text {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  footer {
+    justify-content: flex-start;
+  }
+
+  footer img {
+    align-self: flex-start;
+  }
+
+  div#footer_site_details--text {
+    margin-left: 0px;
+  }
+}

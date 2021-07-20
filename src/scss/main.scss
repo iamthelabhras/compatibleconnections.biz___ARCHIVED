@@ -1,0 +1,14 @@
+/* #region Import Sass partials into main.scss stylesheet.
+        Note:   @import is deprecated!  Use @use & @forward instead.
+        See:    Kevin Powell's video on this: https://www.youtube.com/watch?v=CR-a8upNjJ0 */
+
+@use './abstracts';
+@use './base';
+@use './components';
+@use './layouts';
+@use './pages';
+@use './themes';
+@use './utilities';
+@use './vendors';
+
+/* #endregion Import Sass partials into main.scss stylesheet. */

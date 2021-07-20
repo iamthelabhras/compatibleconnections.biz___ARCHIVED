@@ -1,0 +1,28 @@
+ul.notecard {
+  text-align: initial;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 60ch;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  border: 1px dotted black;
+  border-radius: var(--border_radius);
+  align-self: center;
+  font-size: 18px;
+  /* font-weight: 700; */
+  background: var(--white);
+  list-style: square;
+  background: var(--white);
+}
+
+ul.notecard li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+ul.notecard span.strong {
+  /* No idea why utility class CSS isn't kicking in here? */
+  font-weight: 700;
+}

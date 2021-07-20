@@ -1,0 +1,18 @@
+h2#random_dating_sub_heading {
+  display: inline-block;
+  max-width: 35ch;
+  text-align: center;
+  font-size: 2rem;
+}
+
+main#random_dating_vs_dating_deliberately li {
+  /* Very un-DRY implementation here; go back and figure out why this is brand_color_1 
+      without this additional, page-specific styling? */
+  color: var(--black);
+}
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  h2#random_dating_sub_heading {
+    font-size: 1.75rem;
+  }
+}

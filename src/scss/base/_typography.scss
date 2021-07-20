@@ -1,0 +1,69 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+ul {
+  color: var(--black);
+  /* Implemented text-shadow settings from Services CSS across all pages. */
+  text-shadow: var(--text_shadow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Pacifico, cursive;
+  font-weight: 700;
+}
+
+p,
+span {
+  font-family: "Open Sans";
+  font-weight: 500;
+}
+
+h1 {
+  margin: var(--typography_defaults-margin);
+  font-size: 3.5rem;
+}
+
+main h1:first-of-type {
+  text-align: center;
+  margin-top: var(--h1_page_title--top_margin);
+  margin-bottom: var(--h1_page_title--bottom_margin);
+}
+
+h2 {
+  margin: var(--typography_defaults-margin);
+  font-size: 3rem;
+}
+
+h3 {
+  margin: var(--typography_defaults-margin);
+  font-size: 2.5rem;
+}
+
+h4 {
+  margin: var(--typography_defaults-margin);
+  font-size: 2.25rem;
+}
+
+h5 {
+  margin: var(--typography_defaults-margin);
+  font-size: 2rem;
+}
+
+h6 {
+  margin: var(--typography_defaults-margin);
+  font-size: 1.75rem;
+}
+
+p {
+  margin: var(--typography_defaults-margin) 0px;
+  font-size: 1rem;
+}
