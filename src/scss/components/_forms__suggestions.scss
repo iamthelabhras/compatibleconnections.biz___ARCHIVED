@@ -1,0 +1,67 @@
+form.suggestion {
+  width: 50%;
+  border-top: 10px solid var(--brand_color_1);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  border-radius: 8px 8px var(--border_radius) var(--border_radius);
+
+  ul,
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul,
+  li {
+    width: 100%;
+  }
+
+  label {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    font-family: var(--font_family_2), cursive;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  textarea {
+    width: 80%;
+    height: 250px;
+    border-radius: var(--border_radius);
+    font-family: var(--font_family_1);
+    font-size: 1.3rem;
+  }
+
+  textarea:focus {
+    outline: none;
+    border: 2px solid black;
+  }
+
+  textarea[placeholder] {
+    text-align: center;
+    padding: 25px;
+  }
+
+  button {
+    margin: 15px 0px;
+    font-family: var(--font_family_1), sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+/* #region Media Queries */
+
+@media screen and (min-width: 0px) and (max-width: 1290px) {
+  form.suggestion {
+    width: 95%;
+  }
+}
+
+/* #endregion */

@@ -277,8 +277,8 @@
           <p>
             If there's a topic you'd like us to address in a future Tip, we'd
             love to hear from you! Use the
-            <a href="#form--dating_tips_suggestions">Google Form</a> at the
-            bottom of the page to share your request with us.
+            <a href="#form--dating_tips_suggestions">form at the bottom of the page</a>
+            to share your request with us.
           </p>
         </section>
         <!-- #region Dating Tips Thumbnails & FulL Text -->
@@ -778,28 +778,48 @@
           <div class="spacer-bottom"></div>
         </section>
         <!-- #endregion -->
-        <section class="
-            flex_container--basic_row
-            fc--reset_spacing
-            gray_hero
-            gray_card--image_and_text_block
-          " id="container--dating_tips--suggestions">
-          <img src="/inspirational_graphics_suggestions-3--cropped.9d86ad02.png" alt="A yellow notepad with a heart and cupid arrow drawn on its front page." loading="lazy">
+        <section>
           <div class="
-              flex_container--basic-column
+              flex_container--basic_row
               fc--reset_spacing
-              gray_card--text_block
-            ">
-            <p>
-              If there's a topic you'd like us to address in a future Tip, we'd
-              love to hear from you!
-            </p>
-            <p>Use the Google Form below to share your request with us.</p>
+              gray_hero
+              gray_card--image_and_text_block
+            " id="container--dating_tips--suggestions">
+            <img src="/inspirational_graphics_suggestions-3--cropped.9d86ad02.png" alt="A yellow notepad with a heart and cupid arrow drawn on its front page." loading="lazy">
+            <div class="
+                flex_container--basic-column
+                fc--reset_spacing
+                gray_card--text_block
+              ">
+              <p>
+                If there's a topic you'd like us to address in a future Tip,
+                we'd love to hear from you!
+              </p>
+              <p>Use the form below to share your suggestion with us.</p>
+            </div>
+          </div>
+          <div class="flex_container--basic_row fc--reset_spacing" id="container--form--dating_tips_suggestions">
+            <!-- 
+            COMMENTING OUT THE GOOGLE FORMS IFRAME WHILE I ATTEMPT TO IMPLEMENT MY OWN PHP-BASED CONTACT FORM
+            <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSciGhbpxFxoSJVMT9iZ3OIM3LQDkiTPtJ78hq7gBBOV0b0l9A/viewform?embedded=true"
+            id="form--dating_tips_suggestions"
+            >Loading…</iframe
+          > 
+        -->
+            <form class="suggestion" id="form--dating_tips_suggestions" action="../php/dating_tips_suggestions.php" method="post">
+              <ul>
+                <li>
+                  <label for="suggestion__dating_tip">Dating Tip Suggestion:</label>
+                  <textarea id="suggestion__dating_tip" name="visitor_suggestion__dating_tip" placeholder="What challenge would you like to see us address in a future Dating Tip?" required=""></textarea>
+                </li>
+                <li class="suggestion__button">
+                  <button type="submit">Share Your Suggestion!</button>
+                </li>
+              </ul>
+            </form>
           </div>
         </section>
-        <div class="flex_container--basic_row fc--reset_spacing" id="container--form--dating_tips_suggestions">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSciGhbpxFxoSJVMT9iZ3OIM3LQDkiTPtJ78hq7gBBOV0b0l9A/viewform?embedded=true" id="form--dating_tips_suggestions">Loading…</iframe>
-        </div>
       </main>
       <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
     </div>
