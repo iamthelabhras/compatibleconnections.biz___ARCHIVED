@@ -66,11 +66,7 @@ a:active {
 main a {
   position: relative;
   text-decoration: none;
-  background-image: linear-gradient(
-      rgba(221, 19, 223, 0),
-      rgba(221, 19, 223, 0)
-    ),
-    linear-gradient(rgba(221, 19, 123, 0), rgba(221, 19, 123, 0));
+  background-image: linear-gradient(rgba(221, 19, 223, 0), rgba(221, 19, 223, 0)), linear-gradient(rgba(221, 19, 123, 0), rgba(221, 19, 123, 0));
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat, no-repeat;
@@ -78,11 +74,7 @@ main a {
 }
 
 main a:hover {
-  background-image: linear-gradient(
-      rgba(221, 19, 223, 0),
-      rgba(221, 19, 223, 0)
-    ),
-    linear-gradient(#dd137b, #dd137b);
+  background-image: linear-gradient(rgba(221, 19, 223, 0), rgba(221, 19, 223, 0)), linear-gradient(#dd137b, #dd137b);
   background-size: 0 2px, 100% 2px;
 }
 
@@ -540,8 +532,7 @@ body {
   width: 100vw;
   margin: var(--gray_hero--top_and_bottom_margin) 0;
   padding: 50px 0px;
-  padding: var(--gray_hero--top_and_bottom_padding)
-    var(--gray_hero--left_and_right_padding);
+  padding: var(--gray_hero--top_and_bottom_padding) var(--gray_hero--left_and_right_padding);
   background: var(--gray_hero--background);
 }
 
@@ -609,8 +600,7 @@ body {
   width: 175px;
   height: 100%;
   border-radius: 15px;
-  filter: invert(0%) sepia(100%) saturate(22%) hue-rotate(332deg)
-    brightness(96%) contrast(104%);
+  filter: invert(0%) sepia(100%) saturate(22%) hue-rotate(332deg) brightness(96%) contrast(104%);
 }
 
 /* #endregion */
@@ -633,13 +623,7 @@ div.card--paper {
   width: 335px;
   min-height: 350px;
   font-size: 2rem;
-  background: linear-gradient(
-      to bottom right,
-      var(--paper-dark),
-      20%,
-      var(--transparent)
-    ),
-    var(--paper-color);
+  background: linear-gradient(to bottom right, var(--paper-dark), 20%, var(--transparent)), var(--paper-color);
   box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
 }
 
@@ -747,8 +731,7 @@ span.line {
   list-style-position: inside;
   padding: 0 20px 5px;
   padding-bottom: 10px;
-  background: url(/li_icon-heart-1.6194f64a.svg) no-repeat scroll 0 0
-    transparent;
+  background: url(/li_icon-heart-1.6194f64a.svg) no-repeat scroll 0 0 transparent;
   background-size: 12px 12px;
   background-position-y: 6px;
   color: #dd137b;
@@ -929,9 +912,7 @@ span.line {
   margin-bottom: 25px;
 }
 
-#contact_container
-  #contact_container--upcoming_events
-  div.flex_container--basic_row {
+#contact_container #contact_container--upcoming_events div.flex_container--basic_row {
   justify-content: space-around;
   /* Hacky solution to width: 100% not working? */
   /* max-width: 25vw; */
@@ -1030,7 +1011,7 @@ span.line {
   }
 
   #contact_container--upcoming_events,
-  #contact_container--social_media {
+#contact_container--social_media {
     text-align: center;
   }
 }
@@ -1088,8 +1069,7 @@ a#developer_link {
   *     NOTE: This is a nearly identical, but seperate, set of CSS styles based
   *     on main a styling in _base.scss. */
   text-decoration: none;
-  background-image: linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0)),
-    linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0));
+  background-image: linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0)), linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0));
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat, no-repeat;
@@ -1099,11 +1079,7 @@ a#developer_link {
 }
 
 a#developer_link:hover {
-  background-image: linear-gradient(
-      rgba(255, 255, 0, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(yellow, yellow);
+  background-image: linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 255, 0)), linear-gradient(yellow, yellow);
   background-size: 0 2px, 100% 2px;
 }
 
@@ -1412,8 +1388,7 @@ nav#nav--tablet_and_mobile--nav_links_container ul li:last-of-type {
   margin-top: 35px;
 }
 
-nav#nav--tablet_and_mobile--nav_links_container
-  span.nav--tablet_and_mobile--close_menu {
+nav#nav--tablet_and_mobile--nav_links_container span.nav--tablet_and_mobile--close_menu {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--black);
@@ -1961,10 +1936,7 @@ section.pitch_cards .center_grid_container--sigseries_cards {
 section.pitch_cards .grid_container--sigseries_cards {
   display: grid;
   grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr 0.65fr repeat(4, 1fr) 1.5fr 0.5fr;
-  grid-template-columns: [left-edge] 0.5fr repeat(2, 1fr) [gap-between-image-and-text] 0.25fr repeat(
-      6,
-      1fr
-    ) [right-edge] 0.5fr;
+  grid-template-columns: [left-edge] 0.5fr repeat(2, 1fr) [gap-between-image-and-text] 0.25fr repeat(6, 1fr) [right-edge] 0.5fr;
   grid-template-rows: repeat(2, 0.25fr) repeat(2, 1fr) 0.75fr repeat(2, 0.25fr);
   /* grid-template-rows: repeat(2, 0.25fr) repeat(2, 1fr) 0.75fr 0.25fr; */
   grid-template-areas: "	.	.	.	.	.	.	.	.	.	.	.		" "	.	.	.	.	.	.	.	.	.	.	.		" "	image	image	image	.	text	text	text	text	text	text		.	" "	image	image	image	.	text	text	text	text	text	text		.	" "	.	.	.	.	text text text	text	text	text		.	" "	.	.	.	.	.	.	.	.	.	.	.		" "	.	.	.	.	.	.	.	.	.	.	.	";
@@ -2120,11 +2092,7 @@ section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row {
   align-items: center;
 }
 
-section.pitch_cards
-  .sigseries--card_bulleted
-  li
-  div.flex_container--basic_row
-  span {
+section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row span {
   flex-grow: 1;
   max-width: 40ch;
   font-weight: 700;
@@ -2132,19 +2100,11 @@ section.pitch_cards
   color: var(--black);
 }
 
-section.pitch_cards
-  .sigseries--card_bulleted
-  li
-  div.flex_container--basic_row
-  span.purple {
+section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row span.purple {
   color: var(--brand_color_1);
 }
 
-section.pitch_cards
-  .sigseries--card_bulleted
-  li
-  div.flex_container--basic_row
-  i.fa-check-square {
+section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row i.fa-check-square {
   padding-right: 15px;
   font-size: 3rem;
 }
@@ -2267,7 +2227,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
   }
 
   section.sig_series_title .grid-title-card-image-pwyf,
-  section.sig_series_title .grid-title-card-image-sss {
+section.sig_series_title .grid-title-card-image-sss {
     grid-column: 5/9;
     grid-row: 1/4;
     height: auto;
@@ -2275,7 +2235,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
   }
 
   section.sig_series_title #grid-title-card-text-pwyf,
-  section.sig_series_title #grid-title-card-text-sss {
+section.sig_series_title #grid-title-card-text-sss {
     grid-column: 1/6;
   }
 
@@ -2286,12 +2246,12 @@ section.pitch_cards div.sigseries--card_bulleted li {
   }
 
   section.sig_series_title #grid-title-card-text-pwyf p,
-  section.sig_series_title #grid-title-card-text-sss p {
+section.sig_series_title #grid-title-card-text-sss p {
     font-size: 2rem;
   }
 
   section.sig_series_title #grid-title-card-text-pwyf p:first-of-type,
-  section.sig_series_title #grid-title-card-text-sss p:first-of-type {
+section.sig_series_title #grid-title-card-text-sss p:first-of-type {
     font-size: 2.5rem;
   }
 
@@ -2382,16 +2342,12 @@ section.pitch_cards div.sigseries--card_bulleted li {
     width: 100%;
   }
 
-  section.anchor_links
-    div.instructions-flex_container-anchor_links_group
-    i.fa-heart {
+  section.anchor_links div.instructions-flex_container-anchor_links_group i.fa-heart {
     margin-left: 5px;
     font-size: 1.85rem;
   }
 
-  section.anchor_links
-    div.instructions-flex_container-anchor_links_group
-    a.anchor_links {
+  section.anchor_links div.instructions-flex_container-anchor_links_group a.anchor_links {
     font-size: 1.35rem;
   }
 
@@ -2412,19 +2368,12 @@ section.pitch_cards div.sigseries--card_bulleted li {
     font-size: 4.5rem;
   }
 
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row {
     flex-direction: column;
     text-align: center;
   }
 
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    span {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row span {
     width: 100%;
     padding-top: 10px;
   }
@@ -2436,10 +2385,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
 }
 /* 576 min */
 @media screen and (min-width: 0px) and (max-width: 817px) {
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row {
     /* flex-direction: column; Old 4/20/21 */
     flex-direction: row;
     text-align: center;
@@ -2451,11 +2397,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
     width: 100%;
   }
 
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    i.fa-check-square {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row i.fa-check-square {
     /* width: 65%; Old 4/20/21 */
     /* max-width: 35ch; */
     width: 35%;
@@ -2464,11 +2406,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
     font-size: 2.75rem;
   }
 
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    span {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row span {
     /* width: 65%; Old 4/20/21*/
     max-width: 35ch;
     width: 60%;
@@ -2484,7 +2422,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
   }
 
   section.sig_series_title .grid-title-card-image-pwyf,
-  section.sig_series_title .grid-title-card-image-sss {
+section.sig_series_title .grid-title-card-image-sss {
     grid-column: 6/9;
     grid-row: 1/4;
     justify-self: center;
@@ -2499,7 +2437,7 @@ section.pitch_cards div.sigseries--card_bulleted li {
   }
 
   section.sig_series_title .grid-title-card-image-pwyf,
-  section.sig_series_title .grid-title-card-image-sss {
+section.sig_series_title .grid-title-card-image-sss {
     grid-column: 6/9;
     grid-row: 1/4;
     justify-self: center;
@@ -2508,47 +2446,27 @@ section.pitch_cards div.sigseries--card_bulleted li {
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1075px) {
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    span {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row span {
     font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 1076px) and (max-width: 1144px) {
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    span {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row span {
     font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 1145px) and (max-width: 1157px) {
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    i.fa-check-square {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row i.fa-check-square {
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1158px) and (max-width: 1164px) {
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    i.fa-check-square {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row i.fa-check-square {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1165px) and (max-width: 1185px) {
-  section.pitch_cards
-    .sigseries--card_bulleted
-    li
-    div.flex_container--basic_row
-    i.fa-check-square {
+  section.pitch_cards .sigseries--card_bulleted li div.flex_container--basic_row i.fa-check-square {
     font-size: 2.25rem;
   }
 }
@@ -2714,66 +2632,11 @@ main.meet-cute--individual_issue section#masthead img#masthead {
   -webkit-text-fill-color: transparent;
   /* Linear gradient generated using Coolers.io's Gradient Maker 
        https://coolors.co/gradient-maker/dd137b-e52c87-ed4593-f55d9e-ff7bac-fe84b2-fd8cb8-fd93bd-fc9ac2?position=0,11,22,33,49,64,77,89,100&opacity=100,100,100,100,100,100,100,100,100&type=linear&rotation=45 */
-  background-image: linear-gradient(
-    45deg,
-    #dd137b 0%,
-    #e52e8a 11%,
-    #ed4593 22%,
-    #f55c9e 33%,
-    #ff7aab 49%,
-    #fe86b4 64%,
-    #fd8bb7 77%,
-    #fd91bc 89%,
-    #fc9cc2 100%
-  );
-  background-image: -webkit-linear-gradient(
-    45deg,
-    #dd137b 0%,
-    #e52e8a 11%,
-    #ed4593 22%,
-    #f55c9e 33%,
-    #ff7aab 49%,
-    #fe86b4 64%,
-    #fd8bb7 77%,
-    #fd91bc 89%,
-    #fc9cc2 100%
-  );
-  background-image: -moz-linear-gradient(
-    45deg,
-    #dd137b 0%,
-    #e52e8a 11%,
-    #ed4593 22%,
-    #f55c9e 33%,
-    #ff7aab 49%,
-    #fe86b4 64%,
-    #fd8bb7 77%,
-    #fd91bc 89%,
-    #fc9cc2 100%
-  );
-  background-image: -ms-linear-gradient(
-    45deg,
-    #dd137b 0%,
-    #e52e8a 11%,
-    #ed4593 22%,
-    #f55c9e 33%,
-    #ff7aab 49%,
-    #fe86b4 64%,
-    #fd8bb7 77%,
-    #fd91bc 89%,
-    #fc9cc2 100%
-  );
-  background-image: -o-linear-gradient(
-    45deg,
-    #dd137b 0%,
-    #e52e8a 11%,
-    #ed4593 22%,
-    #f55c9e 33%,
-    #ff7aab 49%,
-    #fe86b4 64%,
-    #fd8bb7 77%,
-    #fd91bc 89%,
-    #fc9cc2 100%
-  );
+  background-image: linear-gradient(45deg, #dd137b 0%, #e52e8a 11%, #ed4593 22%, #f55c9e 33%, #ff7aab 49%, #fe86b4 64%, #fd8bb7 77%, #fd91bc 89%, #fc9cc2 100%);
+  background-image: -webkit-linear-gradient(45deg, #dd137b 0%, #e52e8a 11%, #ed4593 22%, #f55c9e 33%, #ff7aab 49%, #fe86b4 64%, #fd8bb7 77%, #fd91bc 89%, #fc9cc2 100%);
+  background-image: -moz-linear-gradient(45deg, #dd137b 0%, #e52e8a 11%, #ed4593 22%, #f55c9e 33%, #ff7aab 49%, #fe86b4 64%, #fd8bb7 77%, #fd91bc 89%, #fc9cc2 100%);
+  background-image: -ms-linear-gradient(45deg, #dd137b 0%, #e52e8a 11%, #ed4593 22%, #f55c9e 33%, #ff7aab 49%, #fe86b4 64%, #fd8bb7 77%, #fd91bc 89%, #fc9cc2 100%);
+  background-image: -o-linear-gradient(45deg, #dd137b 0%, #e52e8a 11%, #ed4593 22%, #f55c9e 33%, #ff7aab 49%, #fe86b4 64%, #fd8bb7 77%, #fd91bc 89%, #fc9cc2 100%);
   background-size: 400%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -2952,8 +2815,7 @@ section#book_recommendations .book_recommendations--individual_recommendation {
   width: 100%;
 }
 
-section#book_recommendations
-  .book_recommendations--individual_recommendation--text {
+section#book_recommendations .book_recommendations--individual_recommendation--text {
   /* This is the flex_container with all of the text. */
   max-width: 60ch;
   margin-top: 25px;
@@ -2975,9 +2837,7 @@ section#book_recommendations p.book_recommendation--synopsis {
   font-style: italic;
 }
 
-section#book_recommendations
-  .book_recommendations--individual_recommendation
-  img {
+section#book_recommendations .book_recommendations--individual_recommendation img {
   align-self: center;
   width: 20%;
   max-width: 208px;
@@ -3301,7 +3161,7 @@ section#thanks_for_reading .mc-section--text_block p {
   }
 
   p.book_recommendation--title,
-  p.book_recommendation--author {
+p.book_recommendation--author {
     text-align: center;
   }
 }
@@ -3315,8 +3175,7 @@ section#thanks_for_reading .mc-section--text_block p {
     width: 95%;
   }
 
-  .issue_4--message_from_coach_bernadette--summer_activities_container
-    img.summer_activities_image {
+  .issue_4--message_from_coach_bernadette--summer_activities_container img.summer_activities_image {
     width: 350px;
     height: 200px;
   }
@@ -3409,8 +3268,8 @@ form div.container#login_and_remember_me {
 }
 
 /* Full-width inputs */
-input[type="text"],
-input[type="password"] {
+input[type=text],
+input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -4185,8 +4044,7 @@ video {
 /* #endregion */
 /* #region Slide 4: Sass Rain Cloud: Keyframes */
 @keyframes cloudColorChange {
-  0%,
-  100% {
+  0%, 100% {
     background: #fffafa;
   }
   50% {
@@ -4206,16 +4064,13 @@ video {
   }
 }
 @keyframes lightningFlash {
-  0%,
-  39% {
+  0%, 39% {
     opacity: 0;
   }
-  40%,
-  60% {
+  40%, 60% {
     opacity: 1;
   }
-  61%,
-  100% {
+  61%, 100% {
     opacity: 0;
   }
 }
@@ -5068,12 +4923,7 @@ div.dating__footer--2 .btn--secondary {
 @font-face {
   font-family: "VCR";
   src: url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.eot?6300736268315524562");
-  src: url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.woff?6300736268315524562")
-      format("woff"),
-    url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.ttf?6300736268315524562")
-      format("truetype"),
-    url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.svg?6300736268315524562#VCR")
-      format("svg");
+  src: url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.woff?6300736268315524562") format("woff"), url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.ttf?6300736268315524562") format("truetype"), url("//cdn.shopify.com/s/files/1/1765/5971/t/10/assets/VCR_OSD_MONO.svg?6300736268315524562#VCR") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -5166,148 +5016,7 @@ div.books {
   height: 350px;
   border-radius: var(--border_radius);
   background-color: #111;
-  background-image: linear-gradient(
-      to top,
-      #d2b48c 5%,
-      #111 6%,
-      #111 7%,
-      transparent 7%
-    ),
-    linear-gradient(to bottom, #111 30%, transparent 30%),
-    linear-gradient(to right, #b22222, #871a1a 5%, transparent 5%),
-    linear-gradient(
-      to right,
-      transparent 6%,
-      #ff6347 6%,
-      #ff3814 9%,
-      transparent 9%
-    ),
-    linear-gradient(
-      to right,
-      transparent 27%,
-      #556b2f 27%,
-      #39481f 34%,
-      transparent 34%
-    ),
-    linear-gradient(
-      to right,
-      transparent 51%,
-      #fa8072 51%,
-      #f85441 57%,
-      transparent 57%
-    ),
-    linear-gradient(to bottom, #111 35%, transparent 35%),
-    linear-gradient(
-      to right,
-      transparent 42%,
-      #008080 42%,
-      #004d4d 44%,
-      transparent 44%
-    ),
-    linear-gradient(
-      to right,
-      transparent 45%,
-      #008080 45%,
-      #004d4d 47%,
-      transparent 47%
-    ),
-    linear-gradient(
-      to right,
-      transparent 48%,
-      #008080 48%,
-      #004d4d 50%,
-      transparent 50%
-    ),
-    linear-gradient(
-      to right,
-      transparent 87%,
-      #789 87%,
-      #4f5d6a 91%,
-      transparent 91%
-    ),
-    linear-gradient(to bottom, #111 37.5%, transparent 37.5%),
-    linear-gradient(
-      to right,
-      transparent 14%,
-      #bdb76b 14%,
-      #989244 20%,
-      transparent 20%
-    ),
-    linear-gradient(to bottom, #111 40%, transparent 40%),
-    linear-gradient(
-      to right,
-      transparent 10%,
-      #808000 10%,
-      #4d4d00 13%,
-      transparent 13%
-    ),
-    linear-gradient(
-      to right,
-      transparent 21%,
-      #8b4513 21%,
-      #5e2f0d 25%,
-      transparent 25%
-    ),
-    linear-gradient(
-      to right,
-      transparent 58%,
-      #8b4513 58%,
-      #5e2f0d 64%,
-      transparent 64%
-    ),
-    linear-gradient(
-      to right,
-      transparent 92%,
-      #2f4f4f 92%,
-      #1c2f2f 95%,
-      transparent 95%
-    ),
-    linear-gradient(to bottom, #111 48%, transparent 48%),
-    linear-gradient(
-      to right,
-      transparent 96%,
-      #2f4f4f 96%,
-      #1c2f2f 99%,
-      transparent 99%
-    ),
-    linear-gradient(
-      to bottom,
-      transparent 68.5%,
-      transparent 76%,
-      #111 76%,
-      #111 77.5%,
-      transparent 77.5%,
-      transparent 86%,
-      #111 86%,
-      #111 87.5%,
-      transparent 87.5%
-    ),
-    linear-gradient(
-      to right,
-      transparent 35%,
-      #cd5c5c 35%,
-      #bc3a3a 41%,
-      transparent 41%
-    ),
-    linear-gradient(to bottom, #111 68%, transparent 68%),
-    linear-gradient(
-      to right,
-      transparent 78%,
-      #bc8f8f 78%,
-      #bc8f8f 80%,
-      transparent 80%,
-      transparent 82%,
-      #bc8f8f 82%,
-      #bc8f8f 83%,
-      transparent 83%
-    ),
-    linear-gradient(
-      to right,
-      transparent 66%,
-      #a52a2a 66%,
-      #7c2020 85%,
-      transparent 85%
-    );
+  background-image: linear-gradient(to top, #d2b48c 5%, #111 6%, #111 7%, transparent 7%), linear-gradient(to bottom, #111 30%, transparent 30%), linear-gradient(to right, #b22222, #871a1a 5%, transparent 5%), linear-gradient(to right, transparent 6%, #ff6347 6%, #ff3814 9%, transparent 9%), linear-gradient(to right, transparent 27%, #556b2f 27%, #39481f 34%, transparent 34%), linear-gradient(to right, transparent 51%, #fa8072 51%, #f85441 57%, transparent 57%), linear-gradient(to bottom, #111 35%, transparent 35%), linear-gradient(to right, transparent 42%, #008080 42%, #004d4d 44%, transparent 44%), linear-gradient(to right, transparent 45%, #008080 45%, #004d4d 47%, transparent 47%), linear-gradient(to right, transparent 48%, #008080 48%, #004d4d 50%, transparent 50%), linear-gradient(to right, transparent 87%, #789 87%, #4f5d6a 91%, transparent 91%), linear-gradient(to bottom, #111 37.5%, transparent 37.5%), linear-gradient(to right, transparent 14%, #bdb76b 14%, #989244 20%, transparent 20%), linear-gradient(to bottom, #111 40%, transparent 40%), linear-gradient(to right, transparent 10%, #808000 10%, #4d4d00 13%, transparent 13%), linear-gradient(to right, transparent 21%, #8b4513 21%, #5e2f0d 25%, transparent 25%), linear-gradient(to right, transparent 58%, #8b4513 58%, #5e2f0d 64%, transparent 64%), linear-gradient(to right, transparent 92%, #2f4f4f 92%, #1c2f2f 95%, transparent 95%), linear-gradient(to bottom, #111 48%, transparent 48%), linear-gradient(to right, transparent 96%, #2f4f4f 96%, #1c2f2f 99%, transparent 99%), linear-gradient(to bottom, transparent 68.5%, transparent 76%, #111 76%, #111 77.5%, transparent 77.5%, transparent 86%, #111 86%, #111 87.5%, transparent 87.5%), linear-gradient(to right, transparent 35%, #cd5c5c 35%, #bc3a3a 41%, transparent 41%), linear-gradient(to bottom, #111 68%, transparent 68%), linear-gradient(to right, transparent 78%, #bc8f8f 78%, #bc8f8f 80%, transparent 80%, transparent 82%, #bc8f8f 82%, #bc8f8f 83%, transparent 83%), linear-gradient(to right, transparent 66%, #a52a2a 66%, #7c2020 85%, transparent 85%);
   background-size: 300px 150px;
   background-position: center bottom;
   /* clip-path: circle(150px at center center); */
@@ -5564,86 +5273,10 @@ div.books {
   margin-left: -100px;
   background-color: #aaa;
   background-color: #dd137b;
-  background-image: radial-gradient(
-      circle,
-      transparent 26px,
-      black 26px,
-      black 29px,
-      white 29px,
-      white 36px,
-      black 36px,
-      black 39px,
-      transparent 39px
-    ),
-    linear-gradient(to bottom, black, black),
-    linear-gradient(to bottom, black, black),
-    linear-gradient(
-      45deg,
-      transparent 10px,
-      black 10px,
-      black 12px,
-      transparent 12px
-    ),
-    linear-gradient(
-      -45deg,
-      transparent 10px,
-      black 10px,
-      black 12px,
-      transparent 12px
-    ),
-    linear-gradient(to right, black, black),
-    linear-gradient(
-      45deg,
-      transparent 10px,
-      black 10px,
-      black 13px,
-      white 13px,
-      white 100%
-    ),
-    linear-gradient(
-      -45deg,
-      transparent 10px,
-      black 10px,
-      black 13px,
-      white 13px,
-      white 100%
-    ),
-    linear-gradient(
-      -45deg,
-      white 13px,
-      black 13px,
-      black 16px,
-      transparent 16px,
-      transparent 100%
-    ),
-    linear-gradient(
-      45deg,
-      white 13px,
-      black 13px,
-      black 16px,
-      transparent 16px,
-      transparent 100%
-    ),
-    radial-gradient(circle, rgba(0, 0, 0, 0.3) 20%, transparent 20%),
-    radial-gradient(circle, rgba(0, 0, 0, 0.3) 20%, transparent 20%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 20px, transparent 20px),
-    linear-gradient(to top, rgba(255, 255, 255, 0.5) 20px, transparent 20px),
-    linear-gradient(-145deg, transparent 17px, white 17px),
-    linear-gradient(-35deg, transparent 17px, white 17px),
-    linear-gradient(145deg, transparent 17px, white 17px),
-    linear-gradient(35deg, transparent 17px, white 17px);
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
-    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat,
-    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 100px 100px, 20px 3px, 34px 2px, 20px 7px, 20px 7px, 2px 14px,
-    24px 15px, 24px 15px, 24px 10px, 24px 10px, 10px 10px, 10px 10px, 100% 100%,
-    100% 100%, 30px 60%, 30px 60%, 30px 60%, 30px 60%;
-  background-position: center bottom -50px, center bottom 59px,
-    center bottom 51px, left 78px bottom 52px, right 78px bottom 52px,
-    center bottom 38px, left 75px bottom 37px, right 75px bottom 37px,
-    left 73px bottom 52px, right 73px bottom 52px, left bottom,
-    left 5px bottom 5px, left top, left bottom, left top, left bottom, right top,
-    right bottom;
+  background-image: radial-gradient(circle, transparent 26px, black 26px, black 29px, white 29px, white 36px, black 36px, black 39px, transparent 39px), linear-gradient(to bottom, black, black), linear-gradient(to bottom, black, black), linear-gradient(45deg, transparent 10px, black 10px, black 12px, transparent 12px), linear-gradient(-45deg, transparent 10px, black 10px, black 12px, transparent 12px), linear-gradient(to right, black, black), linear-gradient(45deg, transparent 10px, black 10px, black 13px, white 13px, white 100%), linear-gradient(-45deg, transparent 10px, black 10px, black 13px, white 13px, white 100%), linear-gradient(-45deg, white 13px, black 13px, black 16px, transparent 16px, transparent 100%), linear-gradient(45deg, white 13px, black 13px, black 16px, transparent 16px, transparent 100%), radial-gradient(circle, rgba(0, 0, 0, 0.3) 20%, transparent 20%), radial-gradient(circle, rgba(0, 0, 0, 0.3) 20%, transparent 20%), linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 20px, transparent 20px), linear-gradient(to top, rgba(255, 255, 255, 0.5) 20px, transparent 20px), linear-gradient(-145deg, transparent 17px, white 17px), linear-gradient(-35deg, transparent 17px, white 17px), linear-gradient(145deg, transparent 17px, white 17px), linear-gradient(35deg, transparent 17px, white 17px);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 100px 100px, 20px 3px, 34px 2px, 20px 7px, 20px 7px, 2px 14px, 24px 15px, 24px 15px, 24px 10px, 24px 10px, 10px 10px, 10px 10px, 100% 100%, 100% 100%, 30px 60%, 30px 60%, 30px 60%, 30px 60%;
+  background-position: center bottom -50px, center bottom 59px, center bottom 51px, left 78px bottom 52px, right 78px bottom 52px, center bottom 38px, left 75px bottom 37px, right 75px bottom 37px, left 73px bottom 52px, right 73px bottom 52px, left bottom, left 5px bottom 5px, left top, left bottom, left top, left bottom, right top, right bottom;
   border-radius: 20px;
   border: 5px solid black;
   box-shadow: inset -30px 30px 10px rgba(0, 0, 0, 0.3);
@@ -5920,8 +5553,8 @@ div.gray_card--coach_bernadettes_bio {
 @media screen and (min-width: 0px) and (max-width: 575px) {
   /* Resize all circular image on all slides to the same width & height on mobile view */
   .slide_4--image div.container,
-  .slide_12 .circle,
-  .slide_14--image img {
+.slide_12 .circle,
+.slide_14--image img {
     cursor: pointer;
     width: 215px;
     height: 215px;
@@ -5966,7 +5599,7 @@ div.gray_card--coach_bernadettes_bio {
   }
 
   .slide_12 .circle,
-  .slide_14--image img {
+.slide_14--image img {
     cursor: pointer;
     width: 215px;
     height: 215px;
@@ -6001,7 +5634,7 @@ div.gray_card--coach_bernadettes_bio {
      &&&   Stretching slide text & image containers across 100% of their flex container
      &&&   Centering content within text & image flex containers */
   .slide--text,
-  .slide--image {
+.slide--image {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -6038,10 +5671,10 @@ div.gray_card--coach_bernadettes_bio {
 
   /* "Crop" selected smoke plumes of Sass Rocket on smaller screens. */
   .slide_5--image i.s-16,
-  .slide_5--image i.s-17,
-  .slide_5--image i.s-18,
-  .slide_5--image i.s-19,
-  .slide_5--image i.s-20 {
+.slide_5--image i.s-17,
+.slide_5--image i.s-18,
+.slide_5--image i.s-19,
+.slide_5--image i.s-20 {
     display: none;
   }
 
@@ -6059,7 +5692,7 @@ div.gray_card--coach_bernadettes_bio {
   }
 
   .slide_10--image,
-  .slide_11--image {
+.slide_11--image {
     /* For some reason, none of the standard flex-box centering techniques 
        work on this div? */
     margin: 0 auto;
@@ -6094,8 +5727,7 @@ main#coach_bernadettes_certifications h1 {
 /* #region All Cards */
 .gray_card--text_block#certifications_tree_gif_card,
 .gray_card--text_block#mixed_feelings_card,
-.gray_card--text_block#certifications_research_credentials_card
-  .gray_card--text_block#icf_card,
+.gray_card--text_block#certifications_research_credentials_card .gray_card--text_block#icf_card,
 .gray_card--text_block#coach_u_card,
 .gray_card--text_block#interview_intro_card,
 .gray_card--text_block.interview_card,
@@ -6167,15 +5799,11 @@ main#coach_bernadettes_certifications h1 {
   font-weight: 700;
 }
 
-.coaching_certifications_image_and_text
-  ul#mcc_requirements
-  span.certification_label {
+.coaching_certifications_image_and_text ul#mcc_requirements span.certification_label {
   width: 50%;
 }
 
-.coaching_certifications_image_and_text
-  ul#coachu_requirements
-  span.certification_label {
+.coaching_certifications_image_and_text ul#coachu_requirements span.certification_label {
   width: 75%;
 }
 
@@ -6322,12 +5950,8 @@ button#schedule_discovery_session span#schedule_discovery_session_text {
 /* #endregion */
 /* #region Media Queries */
 @media screen and (min-width: 0px) and (max-width: 542px) {
-  .coaching_certifications_image_and_text
-    ul#mcc_requirements
-    span.certification_label,
-  .coaching_certifications_image_and_text
-    ul#coachu_requirements
-    span.certification_label {
+  .coaching_certifications_image_and_text ul#mcc_requirements span.certification_label,
+.coaching_certifications_image_and_text ul#coachu_requirements span.certification_label {
     width: 100%;
   }
 }
@@ -6338,7 +5962,7 @@ button#schedule_discovery_session span#schedule_discovery_session_text {
 }
 @media screen and (min-width: 0px) and (max-width: 921px) {
   button#schedule_discovery_session,
-  details.coaching_interview--questions_dropdown {
+details.coaching_interview--questions_dropdown {
     width: 100% !important;
     margin-top: 50px;
   }
@@ -6760,19 +6384,19 @@ div.personal_info_2--personal_info--icons_and_text i {
   }
 
   div#what_is_a_discovery_session-2,
-  div#what_is_a_discovery_session-3 {
+div#what_is_a_discovery_session-3 {
     max-width: initial;
     min-width: 100%;
   }
 
   div#what_is_a_discovery_session-2 p:first-of-type,
-  div#what_is_a_discovery_session-3 p:first-of-type {
+div#what_is_a_discovery_session-3 p:first-of-type {
     max-width: initial;
     font-size: 20px;
   }
 
   div#what_is_a_discovery_session-2,
-  div#what_is_a_discovery_session-3 {
+div#what_is_a_discovery_session-3 {
     transform: initial;
   }
 
@@ -6802,7 +6426,7 @@ div.personal_info_2--personal_info--icons_and_text i {
 }
 @media screen and (min-width: 0px) and (max-width: 999px) and (min-width: 853px) and (max-width: 940px) {
   div#what_is_a_discovery_session-2,
-  div#what_is_a_discovery_session-3 {
+div#what_is_a_discovery_session-3 {
     transform: initial;
   }
 }
@@ -7225,7 +6849,7 @@ iframe#form--inspirational_graphics_suggestions {
 /* #endregion INSPIRATIONAL GRAPHICS GALLERY */
 @media screen and (min-width: 0px) and (max-width: 575px) {
   .inspirational_graphic--thumbnail:nth-child(odd) img,
-  .inspirational_graphic--thumbnail:nth-child(even) img {
+.inspirational_graphic--thumbnail:nth-child(even) img {
     transform: rotate(0deg);
   }
 
@@ -7256,8 +6880,7 @@ main#letter_from_coach_bernadette .container--letter--text {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-main#letter_from_coach_bernadette
-  .container--letter--image_certifications_and_links {
+main#letter_from_coach_bernadette .container--letter--image_certifications_and_links {
   justify-content: space-between;
   /* Use margin-left to create a bit of gap between flex containers
       so there's still weight space between them when they wrap. */
@@ -7272,9 +6895,7 @@ main#letter_from_coach_bernadette .container--letter--image {
   padding: 25px 25px 0px 25px;
 }
 
-main#letter_from_coach_bernadette
-  .container--letter--image
-  .container--letter--image--certifications {
+main#letter_from_coach_bernadette .container--letter--image .container--letter--image--certifications {
   align-self: center;
   justify-content: space-evenly;
   border: 1px solid lightgray;
@@ -7333,9 +6954,7 @@ main#letter_from_coach_bernadette .container--letter--text path {
 
 /* #endregion */
 /* #region Letter Image, Certifcations, & Links */
-main#letter_from_coach_bernadette
-  .container--letter--image
-  img.coach_bernadette-portrait {
+main#letter_from_coach_bernadette .container--letter--image img.coach_bernadette-portrait {
   align-self: center;
   max-width: 250px;
   max-height: 350px;
@@ -7354,10 +6973,7 @@ main#letter_from_coach_bernadette .container--letter--image span.caption {
   color: var(--brand_color_1);
 }
 
-main#letter_from_coach_bernadette
-  .container--letter--image
-  .container--letter--image--certifications
-  img {
+main#letter_from_coach_bernadette .container--letter--image .container--letter--image--certifications img {
   width: 85px;
   padding: 5px;
 }
@@ -7383,9 +6999,7 @@ main#letter_from_coach_bernadette .container--letter--image--learn_more span {
     position: initial;
   }
 
-  main#letter_from_coach_bernadette
-    .container--letter--image
-    img.coach_bernadette-portrait {
+  main#letter_from_coach_bernadette .container--letter--image img.coach_bernadette-portrait {
     /* Adjust height of Coach Bernadette portrait to prevent it
           from being clipped / cut off by sticky nav menu. */
     max-height: 280px;
@@ -7462,8 +7076,7 @@ h2.message_from_coach_beradette--issue_4 {
   width: 40%;
 }
 
-.issue_4--message_from_coach_bernadette--summer_activities_container
-  img.summer_activities_image {
+.issue_4--message_from_coach_bernadette--summer_activities_container img.summer_activities_image {
   width: 50%;
   height: auto;
   height: 70%;
@@ -8208,8 +7821,7 @@ main#raves a.raves--sig_series_links span.clean_break_on_wrap {
 
 /* #endregion ALL SECTIONS */
 /* #region ARTICLES BY COACH BERNADETTE */
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container {
+section#resources_for_divorced_daters--articles div.articles_outermost_container {
   max-width: 45%;
   min-width: 400px;
   margin-top: 25px;
@@ -8220,35 +7832,24 @@ section#resources_for_divorced_daters--articles
   transition: all ease-in 0.5s;
 }
 
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container:hover {
+section#resources_for_divorced_daters--articles div.articles_outermost_container:hover {
   background: var(--brand_color_1);
 }
 
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container:hover
-  h3,
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container:hover
-  p.article_blurb {
+section#resources_for_divorced_daters--articles div.articles_outermost_container:hover h3,
+section#resources_for_divorced_daters--articles div.articles_outermost_container:hover p.article_blurb {
   color: var(--white);
 }
 
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container:hover
-  img {
+section#resources_for_divorced_daters--articles div.articles_outermost_container:hover img {
   opacity: 1;
 }
 
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container:hover
-  p.article_blurb {
+section#resources_for_divorced_daters--articles div.articles_outermost_container:hover p.article_blurb {
   font-size: 17px;
 }
 
-section#resources_for_divorced_daters--articles
-  div.articles_outermost_container:hover
-  button.article_button {
+section#resources_for_divorced_daters--articles div.articles_outermost_container:hover button.article_button {
   box-shadow: 5px 5px 0px var(--brand_color_3);
 }
 
@@ -8282,15 +7883,13 @@ section#resources_for_divorced_daters--articles h3 {
   transition: all ease-in 0.5s;
 }
 
-section#resources_for_divorced_daters--articles
-  div.image_and_article_blurb_flex_container {
+section#resources_for_divorced_daters--articles div.image_and_article_blurb_flex_container {
   flex-grow: 1;
   justify-content: space-around;
   width: 100%;
 }
 
-section#resources_for_divorced_daters--articles
-  div.article_blurb_flex_container {
+section#resources_for_divorced_daters--articles div.article_blurb_flex_container {
   flex-grow: 1;
   justify-content: space-evenly;
   align-content: space-around;
@@ -8359,10 +7958,8 @@ section#resources_for_divorced_daters--articles button.article_button i {
 
 /* #endregion ARTICLES BY COACH BERNADETTE*/
 /* #region BOOK RECOMMENDATIONS */
-section#resources_for_divorced_daters--book_recommendations
-  div.flex_container--basic_column,
-section#resources_for_divorced_daters--book_recommendations
-  div.flex_container--basic_row {
+section#resources_for_divorced_daters--book_recommendations div.flex_container--basic_column,
+section#resources_for_divorced_daters--book_recommendations div.flex_container--basic_row {
   width: 90%;
 }
 
@@ -8387,13 +7984,11 @@ div.container--book_recommendation--text_and_image:hover {
 
 div.container--book_recommendation--text_and_image:hover h3,
 div.container--book_recommendation--text_and_image:hover p:first-of-type,
-div.container--book_recommendation--text_and_image:hover
-  p.book_recommendation--text--blurb {
+div.container--book_recommendation--text_and_image:hover p.book_recommendation--text--blurb {
   color: var(--white);
 }
 
-div.container--book_recommendation--text_and_image:hover
-  p.book_recommendation--text--blurb {
+div.container--book_recommendation--text_and_image:hover p.book_recommendation--text--blurb {
   font-size: 17px;
 }
 
@@ -8541,8 +8136,7 @@ div.container--video_commendation--text_and_image:hover {
   color: var(--white);
 }
 
-div.container--video_recommendation--text_and_image:hover
-  p.video_recommendation--text--blurb {
+div.container--video_recommendation--text_and_image:hover p.video_recommendation--text--blurb {
   font-size: 17px;
   color: var(--white);
 }
@@ -8849,9 +8443,7 @@ i.connect_icon {
     align-items: center;
   }
 
-  #gray_card--what_is_compatibility
-    div.gray_card--image_and_text_block
-    p:first-of-type {
+  #gray_card--what_is_compatibility div.gray_card--image_and_text_block p:first-of-type {
     margin-top: 25px;
   }
 
@@ -8860,13 +8452,13 @@ i.connect_icon {
   }
 
   main#welcome .gray_card--image_and_text_block img,
-  main#welcome .gray_card--image_and_text_block #crystal_ball_wrapper {
+main#welcome .gray_card--image_and_text_block #crystal_ball_wrapper {
     margin-top: 25px;
     margin-bottom: 25px;
   }
 
   #gray_card--what_is_compatibility p:first-of-type,
-  #gray_card--explore_our_website h3 {
+#gray_card--explore_our_website h3 {
     text-align: center;
   }
 
@@ -8878,15 +8470,11 @@ i.connect_icon {
 /* #endregion */
 /* #region Media Queries - Tablets */
 @media screen and (min-width: 577px) and (max-width: 1024px) {
-  #gray_card--what_is_compatibility
-    .gray_card--image_and_text_block
-    p:first-of-type {
+  #gray_card--what_is_compatibility .gray_card--image_and_text_block p:first-of-type {
     margin-top: 25px;
   }
 
-  #gray_card--explore_our_website
-    .gray_card--image_and_text_block
-    p:last-of-type {
+  #gray_card--explore_our_website .gray_card--image_and_text_block p:last-of-type {
     margin-bottom: 25px;
   }
 

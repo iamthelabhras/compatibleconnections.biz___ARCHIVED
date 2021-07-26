@@ -3,9 +3,9 @@
 node_modules/
 
 # Tell Git to ignore these files:
-
-.gitignore
+.cache
 .DS_Store
+.gitignore
 /images/.DS_Store
 /images/meet_cute/.DS_Store
 /images/resources/.DS_Store
