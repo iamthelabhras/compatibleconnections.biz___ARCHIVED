@@ -3,7 +3,10 @@
 node_modules/
 
 # Tell Git to ignore these files:
+
 .cache
+.cache/
+.cache/*/**
 .DS_Store
 .gitignore
 /images/.DS_Store
