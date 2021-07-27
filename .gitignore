@@ -1,14 +1,10 @@
 # Tell Git to ignore these folders:
 
 node_modules/
+dist/
 
 # Tell Git to ignore these files:
 
 .cache
-.cache/
-.cache/*/**
 .DS_Store
 .gitignore
-/images/.DS_Store
-/images/meet_cute/.DS_Store
-/images/resources/.DS_Store
