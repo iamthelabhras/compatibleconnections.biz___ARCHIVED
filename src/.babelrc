@@ -1,0 +1,5 @@
+{
+"browserslist": ["last 30 versions",
+"> 0.2%",
+"not dead"]
+}
