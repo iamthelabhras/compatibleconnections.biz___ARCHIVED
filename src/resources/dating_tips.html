@@ -632,19 +632,19 @@
                   date" and so have thousands of daters! So don't even go this
                   route. Let me save you the trouble and tell you they're
                   terrible and they won't get you a second date if that's what
-                  you're after!  
+                  you're after!  
                 </p>
                 <p>
                   The only way to show you're an interesting person and want to
                   genuinely get to know the person you're sitting across is to
-                  ask questions that would tell you if you're compatible. 
+                  ask questions that would tell you if you're compatible. 
                 </p>
                 <p>
                   And if you think "Tell me about yourself" is a great question
                   to seek out compatibility you're dead wrong! It's a lazy
                   question shows no creativity, interest, or imagination. In
                   fact, your date now feels like he's being interviewed and
-                  that's a really bad move on your part.  Who wants to feel like
+                  that's a really bad move on your part.  Who wants to feel like
                   their in an interview on a date? Not many!
                 </p>
                 <p>
@@ -655,14 +655,14 @@
                   specific in what you're looking for?”
                 </p>
                 <p>
-                  Congratulations! Now ...  you're feeling stupid realizing this
+                  Congratulations! Now ...  you're feeling stupid realizing this
                   date is not going well and your date just flipped your
-                  question back on you! 
+                  question back on you! 
                 </p>
                 <p>
                   Many people do not realize how important questions are on a
                   first date. It's the main reason most people do not get second
-                  dates. 
+                  dates. 
                 </p>
                 <p>
                   If you want to have great first dates, you have to come to the
@@ -1028,38 +1028,29 @@
             class="flex_container--basic_row fc--reset_spacing"
             id="container--form--dating_tips_suggestions"
           >
-            <!-- 
-            COMMENTING OUT THE GOOGLE FORMS IFRAME WHILE I ATTEMPT TO IMPLEMENT MY OWN PHP-BASED CONTACT FORM
-            <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSciGhbpxFxoSJVMT9iZ3OIM3LQDkiTPtJ78hq7gBBOV0b0l9A/viewform?embedded=true"
-            id="form--dating_tips_suggestions"
-            >Loading…</iframe
-          > 
-        -->
-            <form
-              class="suggestion"
-              id="form--dating_tips_suggestions"
-              action="../php/dating_tips_suggestions.php"
-              method="post"
-            >
-              <ul>
-                <li>
-                  <label for="suggestion__dating_tip"
-                    >Dating Tip Suggestion:</label
-                  >
-                  <textarea
-                    id="suggestion__dating_tip"
-                    name="visitor_suggestion__dating_tip"
-                    placeholder="What challenge would you like to see us address in a future Dating Tip?"
-                    required
-                  ></textarea>
-                </li>
-                <li class="suggestion__button">
-                  <button type="submit">Share Your Suggestion!</button>
-                </li>
-              </ul>
-            </form>
-          </div>
+          <form
+          class="suggestion"
+          id="form--dating_tips_suggestions"
+          action="dating_tips_suggestions.php"
+          method="POST"
+        >
+          <ul>
+            <li>
+              <label for="suggestion__dating_tip"
+                >Dating Tip Suggestion:</label
+              >
+              <textarea
+                name="suggestion__dating_tip"
+                placeholder="What challenge would you like to see us address in a future Dating Tip?"
+                spellcheck="true"
+                required
+              ></textarea>
+            </li>
+            <li class="suggestion__button">
+              <button type="submit">Share Your Suggestion!</button>
+            </li>
+          </ul>
+        </form>
         </section>
       </main>
       <!-- The div below closes the "hide everything but the responsive nav" wrapper above. -->
