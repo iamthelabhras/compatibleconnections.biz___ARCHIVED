@@ -434,9 +434,8 @@
               >share your favorite quote</a
             >
             about love, dating, romance, divorce, or personal growth with us in
-            the Google Form at the very bottom of the page. We'll add it to the
-            (ever growing) list of quotes we use to create new Inspirational
-            Graphics!
+            the form at the very bottom of the page. We'll add it to the (ever
+            growing) list of quotes we use to create new Inspirational Graphics!
           </p>
         </section>
         <!-- #region Inspirational Graphics Gallery -->
@@ -1275,7 +1274,7 @@
                 personal growth that inspires <span class="emphasis">you</span>?
               </p>
               <p>Let us know!</p>
-              <p>Use the Google Form below to share your quote with us.</p>
+              <p>Use the form below to share your quote with us.</p>
               <p>
                 We'll add it to the (ever growing) list of quotes we use to to
                 create our Inspirational Graphics!
@@ -1284,13 +1283,31 @@
           </div>
           <div
             class="flex_container--basic_row fc--reset_spacing"
-            id="container--form--inspirational_graphics_suggestions"
+            id="container--form--dating_tips_suggestions"
           >
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLScSpoMe2Bpn_-tjK54LA2cvvjBgVO400zgoZhWqHo2BMG1Oyg/viewform?embedded=true"
+            <form
+              class="suggestion"
               id="form--inspirational_graphics_suggestions"
-              >Loading…</iframe
+              action="inspirational_graphics_suggestions.php"
+              method="POST"
             >
+              <ul>
+                <li>
+                  <label for="suggestion__inspirational_graphic"
+                    >Dating Tip Suggestion:</label
+                  >
+                  <textarea
+                    name="suggestion__inspirational_graphic"
+                    placeholder="What challenge would you like to see us address in a future Dating Tip?"
+                    spellcheck="true"
+                    required
+                  ></textarea>
+                </li>
+                <li class="suggestion__button">
+                  <button type="submit">Share Your Suggestion!</button>
+                </li>
+              </ul>
+            </form>
           </div>
         </section>
       </main>
