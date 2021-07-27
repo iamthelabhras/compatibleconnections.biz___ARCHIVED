@@ -4,7 +4,6 @@ node_modules/
 dist/
 
 # Tell Git to ignore these files:
-
 .cache
 .DS_Store
 .gitignore
