@@ -25,7 +25,7 @@ main#letter_from_coach_bernadette
   .container--letter--image_certifications_and_links {
   justify-content: space-between;
   /* Use margin-left to create a bit of gap between flex containers
-      so there's still weight space between them when they wrap. */
+      so there's still white space between them when they wrap. */
   margin-left: 25px;
 }
 
@@ -147,14 +147,7 @@ main#letter_from_coach_bernadette .container--letter--image--learn_more span {
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 623px) {
-  /* This styling is applied when the social media icons in
-      the footer wrap.  Max-width should = that breakpoint! . */
-
-  main#letter_from_coach_bernadette .container--letter--image {
-    /* Remove sticky positioning from Coach Bernadette portrait container. */
-    position: initial;
-  }
+@media screen and (min-height: 0px) and (max-height: 662px) {
 
   main#letter_from_coach_bernadette
     .container--letter--image
@@ -163,6 +156,13 @@ main#letter_from_coach_bernadette .container--letter--image--learn_more span {
           from being clipped / cut off by sticky nav menu. */
     max-height: 280px;
   }
+
+main#letter_from_coach_bernadette .container--letter--image--learn_more {
+  /* Set a z-index on the "Learn More" container so that it doesn't overlap / "smoosh" with
+        Coach Bernadette's certifications on smaller screens. */
+z-index: 2;
+}
+
 }
 
 /* #endregion Media Queries */
