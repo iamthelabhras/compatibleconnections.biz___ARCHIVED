@@ -1,7 +1,9 @@
 # Tell Git to ignore these folders:
 .cache/
+client_login/
 dist/
 node_modules/
+
 
 # Tell Git to ignore these files:
 .DS_Store
